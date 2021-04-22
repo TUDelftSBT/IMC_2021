@@ -23,18 +23,30 @@ NS_ :
 
 BS_:
 
-BU_: Xsens_Sensor imc_BUSFX_2_133754 Sender__XXX WC
+BU_: Sender__XXX imc_BUSFX_2_133754 WC Xsens_Sensor
 
 
-BO_ 808 Xsense_Velocity: 6 Xsens_Sensor
- SG_ Xsense_velX : 7|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
- SG_ Xsense_velY : 23|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
- SG_ Xsense_velZ : 39|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
+BO_ 200 WC_Error: 2 Sender__XXX
+ SG_ WC_circuitbreaker_trip : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flow_temp_battery_high : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flow_temp_port_high : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flow_emp_star_high : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_v24_temperature_low : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_v24_temp_high : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_v24_voltage_low : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_v24_voltage_high : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowTempBat_extrHigh : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowtemp_port_extrHigh : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowTemp_star_extrHigh : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowBattery_extreme_low : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowPortOloop_extrLow : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_flowStarOloop_extrLow : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ WC_v24temp_extreme_high : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 201 WC_Flow: 6 Sender__XXX
  SG_ WC_Flow_batteryLoop : 0|16@1+ (7.814407800E-4,0.000000000E+0) [0.000000000E+0|5.121172152E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_2 : 16|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_3 : 32|16@1+ (7.814407800E-4,0.000000000E+0) [0.000000000E+0|5.121172152E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_2 : 16|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_3 : 32|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 202 WC_FlowTemp: 6 Sender__XXX
  SG_ WC_FlowTemp_BatteryLoop : 0|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "C"  imc_BUSFX_2_133754
@@ -124,6 +136,14 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMS_FATAL_ERROR : 48|1@1- (1.000000000E+0,0.000000000E+0) [-1.000000000E+0|0.000000000E+0] ""  imc_BUSFX_2_133754
  SG_ EMS_Error_charge_full : 49|1@1- (1.000000000E+0,0.000000000E+0) [-1.000000000E+0|0.000000000E+0] ""  imc_BUSFX_2_133754
 
+BO_ 301 EMS_FlowTemp: 4 Sender__XXX
+ SG_ EMS_FlowTemp_dcdc : 16|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "C"  imc_BUSFX_2_133754
+ SG_ EMS_FlowTemp_motorLoop : 0|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "C"  imc_BUSFX_2_133754
+
+BO_ 302 EMS_flow: 6 Sender__XXX
+ SG_ EMS_flow_dcdc : 0|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038148E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ EMS_flow_motorLoop : 16|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038148E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
+
 BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_OFF : 1|1@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.000000000E+0] ""  imc_BUSFX_2_133754
  SG_ Dashboard_button_auto : 2|1@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.000000000E+0] ""  imc_BUSFX_2_133754
@@ -174,10 +194,10 @@ BO_ 803 Xsense_EulerAngles: 6 Xsens_Sensor
  SG_ Xsense_yaw : 39|16@0- (7.812500000E-3,0.000000000E+0) [-2.560000000E+2|2.559921875E+2] "deg"  imc_BUSFX_2_133754
 
 BO_ 804 Xsense_DeltaQ: 8 Xsens_Sensor
- SG_ Xsense_DeltaQ1 : 7|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/s²"  imc_BUSFX_2_133754
- SG_ Xsense_DeltaQ2 : 23|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/s²"  imc_BUSFX_2_133754
- SG_ Xsense_DeltaQ3 : 39|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/s²"  imc_BUSFX_2_133754
- SG_ Xsense_DeltaQ4 : 55|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/s²"  imc_BUSFX_2_133754
+ SG_ Xsense_DeltaQ1 : 7|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/sÂ²"  imc_BUSFX_2_133754
+ SG_ Xsense_DeltaQ2 : 23|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/sÂ²"  imc_BUSFX_2_133754
+ SG_ Xsense_DeltaQ3 : 39|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/sÂ²"  imc_BUSFX_2_133754
+ SG_ Xsense_DeltaQ4 : 55|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/sÂ²"  imc_BUSFX_2_133754
 
 BO_ 805 Xsense_DeltaV: 7 Xsens_Sensor
  SG_ Xsense_X : 7|16@0- (7.629394531E-6,0.000000000E+0) [-2.500000000E-1|2.499923706E-1] "m/s"  imc_BUSFX_2_133754
@@ -194,34 +214,18 @@ BO_ 807 Xsense_LongLat: 8 Xsens_Sensor
  SG_ Xsense_atitude : 7|32@0- (5.960464477E-8,0.000000000E+0) [-1.280000000E+2|1.279999999E+2] "deg"  imc_BUSFX_2_133754
  SG_ Xsense_longitude : 39|32@0- (1.192092895E-7,0.000000000E+0) [-2.560000000E+2|2.559999999E+2] "deg"  imc_BUSFX_2_133754
 
+BO_ 808 Xsense_Velocity: 6 Xsens_Sensor
+ SG_ Xsense_velX : 7|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
+ SG_ Xsense_velY : 23|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
+ SG_ Xsense_velZ : 39|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
+
 BO_ 1313 Shunt_Current: 6 Sender__XXX
  SG_ Shunt_Current_msg : 23|32@0+ (1.000000000E-3,0.000000000E+0) [0.000000000E+0|4.294967295E+6] "A"  imc_BUSFX_2_133754
 
 BO_ 1600 HydrogenSensor: 8 Sender__XXX
  SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
 
-BO_ 200 WC_Error: 2 Sender__XXX
- SG_ WC_circuitbreaker_trip : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flow_temp_battery_high : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flow_temp_port_high : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flow_emp_star_high : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_v24_temperature_low : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_v24_temp_high : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_v24_voltage_low : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_v24_voltage_high : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowTempBat_extrHigh : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowtemp_port_extrHigh : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowTemp_star_extrHigh : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowBattery_extreme_low : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowPortOloop_extrLow : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_flowStarOloop_extrLow : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ WC_v24temp_extreme_high : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
-
-BO_ 301 EMS_FlowTemp: 4 Sender__XXX
- SG_ EMS_FlowTemp_dcdc : 0|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "C"  imc_BUSFX_2_133754
- SG_ EMS_FlowTemp_motorLoop : 16|16@1+ (1.221001220E-3,0.000000000E+0) [0.000000000E+0|8.001831495E+1] "C"  imc_BUSFX_2_133754
-
-CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 10";
+CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ SG_ 801 Xsense_FilterMode "Mask for the 3 bit filter mode field. Values: 0 false 1 true ";
 CM_ SG_ 801 HaveGnssTimePulse "Indicates that the 1PPS GNSS time pulse is present. Values: 0 false 1 true ";
 CM_ SG_ 801 Interpolated "When set Indicates the sample is an interpolation between other samples. Values: 0 false 1 true ";
@@ -253,7 +257,7 @@ BA_DEF_ BO_ "GenMsgCycleTimeus" INT 100 60000000;
 
 BA_DEF_DEF_  "GenMsgCycleTimeus" 100000;
 
-BA_ "GenMsgCycleTimeus" BO_ 808 100000;
+BA_ "GenMsgCycleTimeus" BO_ 200 100000;
 BA_ "GenMsgCycleTimeus" BO_ 201 100000;
 BA_ "GenMsgCycleTimeus" BO_ 202 100000;
 BA_ "GenMsgCycleTimeus" BO_ 203 100000;
@@ -262,6 +266,8 @@ BA_ "GenMsgCycleTimeus" BO_ 251 100000;
 BA_ "GenMsgCycleTimeus" BO_ 252 100000;
 BA_ "GenMsgCycleTimeus" BO_ 253 100000;
 BA_ "GenMsgCycleTimeus" BO_ 300 100000;
+BA_ "GenMsgCycleTimeus" BO_ 301 100000;
+BA_ "GenMsgCycleTimeus" BO_ 302 100000;
 BA_ "GenMsgCycleTimeus" BO_ 500 100000;
 BA_ "GenMsgCycleTimeus" BO_ 800 100000;
 BA_ "GenMsgCycleTimeus" BO_ 801 100000;
@@ -271,7 +277,6 @@ BA_ "GenMsgCycleTimeus" BO_ 804 100000;
 BA_ "GenMsgCycleTimeus" BO_ 805 100000;
 BA_ "GenMsgCycleTimeus" BO_ 806 100000;
 BA_ "GenMsgCycleTimeus" BO_ 807 100000;
+BA_ "GenMsgCycleTimeus" BO_ 808 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1313 10000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
-BA_ "GenMsgCycleTimeus" BO_ 200 100000;
-BA_ "GenMsgCycleTimeus" BO_ 301 100000;
