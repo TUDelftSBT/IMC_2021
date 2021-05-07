@@ -1,7 +1,7 @@
 FileVersion=1
 FileFormat=2
 FileSubFormat=1
-FileMagic=12345713
+FileMagic=12345714
 imcDevicesVersion=1
 SoftwareVersion=2 13 11
 DeviceVersion=1 13
@@ -2192,7 +2192,7 @@ LogSendChannels=1
 		BitComment9="Stack Low Current Alarm"
 		ByteIndex9=5
 		BitIndex9=4
-		BitName10="FC_Alarms_eFCVM-Finger"
+		BitName10="FC_Alarms_eFCVM_Finger"
 		BitComment10="eFCVM Bad Finger Alarm"
 		ByteIndex10=5
 		BitIndex10=5

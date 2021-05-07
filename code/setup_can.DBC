@@ -193,7 +193,7 @@ BO_ 704 FC_FaultsAlarms: 8 Sender__XXX
  SG_ FC_Alarms_Recovery : 42|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_Alarms_CoolFlow : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_StackLowC : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ FC_Alarms_eFCVM-Finger : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_eFCVM_Finger : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_Alarms_EEPROM : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_Alarms_EMP_Pump : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
@@ -297,7 +297,7 @@ CM_ SG_ 704 FC_Alarms_BlowVoltLow "Blower Low Voltage Alarm";
 CM_ SG_ 704 FC_Alarms_Recovery "Recovery Alarm";
 CM_ SG_ 704 FC_Alarms_CoolFlow "Coolant Low Flow Alarm";
 CM_ SG_ 704 FC_StackLowC "Stack Low Current Alarm";
-CM_ SG_ 704 FC_Alarms_eFCVM-Finger "eFCVM Bad Finger Alarm";
+CM_ SG_ 704 FC_Alarms_eFCVM_Finger "eFCVM Bad Finger Alarm";
 CM_ SG_ 704 FC_Alarms_EEPROM "EEPROM Error Alarm";
 CM_ SG_ 704 FC_Alarms_EMP_Pump "EMP Pump Alarm";
 CM_ SG_ 801 Xsense_FilterMode "Mask for the 3 bit filter mode field. Values: 0 false 1 true ";
