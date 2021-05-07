@@ -225,9 +225,48 @@ BO_ 1313 Shunt_Current: 6 Sender__XXX
 BO_ 1600 HydrogenSensor: 8 Sender__XXX
  SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
 
-BO_ 303 EMS_ExtraADC: 8 Sender__XXX
- SG_ EMS_ExtraADC_TankPressure : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] "Bar"  imc_BUSFX_2_133754
- SG_ EMS_ExtraADC_TankTemp : 0|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] "C"  imc_BUSFX_2_133754
+BO_ 576 FC_State: 8 Sender__XXX
+ SG_ FC_State_Cstack : 32|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
+ SG_ FC_State_Vstack : 48|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "V"  imc_BUSFX_2_133754
+ SG_ FC_State_Callowed : 16|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
+
+BO_ 832 FC_Temp: 8 Sender__XXX
+ SG_ FC_Temp_CoolantSetPoint : 16|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
+ SG_ FC_Temp_Coolant : 0|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
+
+BO_ 704 FC_FaultsAlarms: 8 Sender__XXX
+ SG_ FC_Faults_UnderV : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_OverTemo : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_HearthBeat : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_Estop : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_LeakCheck : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_FreezeMode : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_CoolFlow : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_Idle : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_AnPurge : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_StkCurrent : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_H2-Opressure : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Faults_H2-Upressure : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_H2-PSensRange : 32|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_AirFlowRange : 33|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_CsenseRange : 34|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_CoolTempHigh : 35|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_OverPower : 36|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_NonRun : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_BlowFlow : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_AnPumpSpeed : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_CoolTemp : 40|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_BlowVoltLow : 41|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_Recovery : 42|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_CoolFlow : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_StackLowC : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_eFCVM-Finger : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_EEPROM : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ FC_Alarms_EMP-Pump : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+
+BO_ 303 EMS_OthADC: 8 Sender__XXX
+ SG_ EMS_OthADC_TankTemp : 0|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] "C"  imc_BUSFX_2_133754
+ SG_ EMS_OthADC_TankPress : 16|16@1+ (6.836041810E-3,0.000000000E+0) [0.000000000E+0|4.480000000E+2] "Bar"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ SG_ 801 Xsense_FilterMode "Mask for the 3 bit filter mode field. Values: 0 false 1 true ";
@@ -253,6 +292,38 @@ CM_ SG_ 801 GpsValid "Set when the device has a GPS receiver and the receiver sa
 CM_ SG_ 801 RepresentativeMotion "Indicates if the In-Run Compass Calibration is doing the representative motion analysis. Values: 0 false 1 true ";
 CM_ SG_ 801 ExternalClockSynced "Indicates whether the internal clock is synced with an external clock (Either GNNS or custom provided clock sync). Values: 0 false 1 true ";
 CM_ SG_ 801 Xsense_NoRotation "Values: 1 Aborted 2 SamplesRejected 3 RunningNormally ";
+CM_ SG_ 576 FC_State_Cstack "Fuel Cell Current";
+CM_ SG_ 576 FC_State_Vstack "Fuel Cell";
+CM_ SG_ 576 FC_State_Callowed "Current Draw Allowed";
+CM_ BO_ 832 "Coolant Temperature Transmission from the PDC";
+CM_ SG_ 704 FC_Faults_UnderV "Stack Under Voltage Fault";
+CM_ SG_ 704 FC_Faults_OverTemo "Coolant Over-Temperature Fault";
+CM_ SG_ 704 FC_Faults_HearthBeat "Command Heart Beat Fault";
+CM_ SG_ 704 FC_Faults_Estop "Internal System Estop Fault";
+CM_ SG_ 704 FC_Faults_LeakCheck "Leak Check Failed Fault";
+CM_ SG_ 704 FC_Faults_FreezeMode "Freeze Mode Fault";
+CM_ SG_ 704 FC_Faults_CoolFlow "Coolant Low Flow Fault";
+CM_ SG_ 704 FC_Faults_Idle "Idle Fault";
+CM_ SG_ 704 FC_Faults_AnPurge "Anode Purge Fault";
+CM_ SG_ 704 FC_Faults_StkCurrent "Stack Current Fault";
+CM_ SG_ 704 FC_Faults_H2-Opressure "H2 Supply Over-Pressure Fault";
+CM_ SG_ 704 FC_Faults_H2-Upressure "H2 Supply Under-Pressure Fault";
+CM_ SG_ 704 FC_Alarms_H2-PSensRange "H2 Pressure Sensor Out of Range Alarm";
+CM_ SG_ 704 FC_Alarms_AirFlowRange "Air Flow Out of Range Alarm";
+CM_ SG_ 704 FC_Alarms_CsenseRange "Current Sensor Out of Range Alarm";
+CM_ SG_ 704 FC_Alarms_CoolTempHigh "Coolant Temperature High Alarm";
+CM_ SG_ 704 FC_Alarms_OverPower "System Over-Power Alarm";
+CM_ SG_ 704 FC_Alarms_NonRun "Air Flow in a Non-Run State Alarm";
+CM_ SG_ 704 FC_Alarms_BlowFlow "Blower Low Flow Alarm";
+CM_ SG_ 704 FC_Alarms_AnPumpSpeed "Anode Pump Over/Under Speed Alarm";
+CM_ SG_ 704 FC_Alarms_CoolTemp "Coolant Temp. Out of Range Alarm";
+CM_ SG_ 704 FC_Alarms_BlowVoltLow "Blower Low Voltage Alarm";
+CM_ SG_ 704 FC_Alarms_Recovery "Recovery Alarm";
+CM_ SG_ 704 FC_Alarms_CoolFlow "Coolant Low Flow Alarm";
+CM_ SG_ 704 FC_StackLowC "Stack Low Current Alarm";
+CM_ SG_ 704 FC_Alarms_eFCVM-Finger "eFCVM Bad Finger Alarm";
+CM_ SG_ 704 FC_Alarms_EEPROM "EEPROM Error Alarm";
+CM_ SG_ 704 FC_Alarms_EMP-Pump "EMP Pump Alarm";
 CM_ BU_ imc_BUSFX_2_133754 "Serial number: 133754
 Slot number: 1
 Node number: 1";
@@ -284,4 +355,7 @@ BA_ "GenMsgCycleTimeus" BO_ 807 100000;
 BA_ "GenMsgCycleTimeus" BO_ 808 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1313 10000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
+BA_ "GenMsgCycleTimeus" BO_ 576 200000;
+BA_ "GenMsgCycleTimeus" BO_ 832 200000;
+BA_ "GenMsgCycleTimeus" BO_ 704 100000;
 BA_ "GenMsgCycleTimeus" BO_ 303 100000;
