@@ -162,12 +162,12 @@ BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_4 : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ Dashboard_button_5 : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
-BO_ 576 FC_State: 8 Sender__XXX
+BO_ 577 FC_State: 8 Sender__XXX
  SG_ FC_State_Callowed : 16|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Cstack : 32|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Vstack : 48|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "V"  imc_BUSFX_2_133754
 
-BO_ 704 FC_FaultsAlarms: 8 Sender__XXX
+BO_ 705 FC_FaultsAlarms: 8 Sender__XXX
  SG_ FC_Faults_UnderV : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_Faults_OverTemo : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ FC_Faults_HearthBeat : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -250,7 +250,7 @@ BO_ 806 Xsense_RateOfTurn: 6 Xsens_Sensor
  SG_ Xsense_gyrZ : 39|16@0- (1.953125000E-3,0.000000000E+0) [-6.400000000E+1|6.399804688E+1] "rad/s"  imc_BUSFX_2_133754
 
 BO_ 807 Xsense_LongLat: 8 Xsens_Sensor
- SG_ Xsense_atitude : 7|32@0- (5.960464477E-8,0.000000000E+0) [-1.280000000E+2|1.279999999E+2] "deg"  imc_BUSFX_2_133754
+ SG_ Xsense_latitude : 7|32@0- (5.960464477E-8,0.000000000E+0) [-1.280000000E+2|1.279999999E+2] "deg"  imc_BUSFX_2_133754
  SG_ Xsense_longitude : 39|32@0- (1.192092895E-7,0.000000000E+0) [-2.559999999E+2|2.559999998E+2] "deg"  imc_BUSFX_2_133754
 
 BO_ 808 Xsense_Velocity: 6 Xsens_Sensor
@@ -258,7 +258,7 @@ BO_ 808 Xsense_Velocity: 6 Xsens_Sensor
  SG_ Xsense_velY : 23|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
  SG_ Xsense_velZ : 39|16@0- (1.562500000E-2,0.000000000E+0) [-5.120000000E+2|5.119843750E+2] "m/s"  imc_BUSFX_2_133754
 
-BO_ 832 FC_Temp: 8 Sender__XXX
+BO_ 833 FC_Temp: 8 Sender__XXX
  SG_ FC_Temp_Coolant : 0|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
  SG_ FC_Temp_CoolantSetPoint : 16|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
 
@@ -269,37 +269,37 @@ BO_ 1600 HydrogenSensor: 8 Sender__XXX
  SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
-CM_ SG_ 576 FC_State_Callowed "Current Draw Allowed";
-CM_ SG_ 576 FC_State_Cstack "Fuel Cell Current";
-CM_ SG_ 576 FC_State_Vstack "Fuel Cell";
-CM_ SG_ 704 FC_Faults_UnderV "Stack Under Voltage Fault";
-CM_ SG_ 704 FC_Faults_OverTemo "Coolant Over-Temperature Fault";
-CM_ SG_ 704 FC_Faults_HearthBeat "Command Heart Beat Fault";
-CM_ SG_ 704 FC_Faults_Estop "Internal System Estop Fault";
-CM_ SG_ 704 FC_Faults_LeakCheck "Leak Check Failed Fault";
-CM_ SG_ 704 FC_Faults_FreezeMode "Freeze Mode Fault";
-CM_ SG_ 704 FC_Faults_CoolFlow "Coolant Low Flow Fault";
-CM_ SG_ 704 FC_Faults_Idle "Idle Fault";
-CM_ SG_ 704 FC_Faults_AnPurge "Anode Purge Fault";
-CM_ SG_ 704 FC_Faults_StkCurrent "Stack Current Fault";
-CM_ SG_ 704 FC_Faults_H2_Opressure "H2 Supply Over Pressure Fault";
-CM_ SG_ 704 FC_Faults_H2_Upressure "H2 Supply Under Pressure Fault";
-CM_ SG_ 704 FC_Alarms_H2_PSensRange "H2 Pressure Sensor Out of Range Alarm";
-CM_ SG_ 704 FC_Alarms_AirFlowRange "Air Flow Out of Range Alarm";
-CM_ SG_ 704 FC_Alarms_CsenseRange "Current Sensor Out of Range Alarm";
-CM_ SG_ 704 FC_Alarms_CoolTempHigh "Coolant Temperature High Alarm";
-CM_ SG_ 704 FC_Alarms_OverPower "System Over-Power Alarm";
-CM_ SG_ 704 FC_Alarms_NonRun "Air Flow in a Non-Run State Alarm";
-CM_ SG_ 704 FC_Alarms_BlowFlow "Blower Low Flow Alarm";
-CM_ SG_ 704 FC_Alarms_AnPumpSpeed "Anode Pump Over/Under Speed Alarm";
-CM_ SG_ 704 FC_Alarms_CoolTemp "Coolant Temp. Out of Range Alarm";
-CM_ SG_ 704 FC_Alarms_BlowVoltLow "Blower Low Voltage Alarm";
-CM_ SG_ 704 FC_Alarms_Recovery "Recovery Alarm";
-CM_ SG_ 704 FC_Alarms_CoolFlow "Coolant Low Flow Alarm";
-CM_ SG_ 704 FC_StackLowC "Stack Low Current Alarm";
-CM_ SG_ 704 FC_Alarms_eFCVM_Finger "eFCVM Bad Finger Alarm";
-CM_ SG_ 704 FC_Alarms_EEPROM "EEPROM Error Alarm";
-CM_ SG_ 704 FC_Alarms_EMP_Pump "EMP Pump Alarm";
+CM_ SG_ 577 FC_State_Callowed "Current Draw Allowed";
+CM_ SG_ 577 FC_State_Cstack "Fuel Cell Current";
+CM_ SG_ 577 FC_State_Vstack "Fuel Cell";
+CM_ SG_ 705 FC_Faults_UnderV "Stack Under Voltage Fault";
+CM_ SG_ 705 FC_Faults_OverTemo "Coolant Over-Temperature Fault";
+CM_ SG_ 705 FC_Faults_HearthBeat "Command Heart Beat Fault";
+CM_ SG_ 705 FC_Faults_Estop "Internal System Estop Fault";
+CM_ SG_ 705 FC_Faults_LeakCheck "Leak Check Failed Fault";
+CM_ SG_ 705 FC_Faults_FreezeMode "Freeze Mode Fault";
+CM_ SG_ 705 FC_Faults_CoolFlow "Coolant Low Flow Fault";
+CM_ SG_ 705 FC_Faults_Idle "Idle Fault";
+CM_ SG_ 705 FC_Faults_AnPurge "Anode Purge Fault";
+CM_ SG_ 705 FC_Faults_StkCurrent "Stack Current Fault";
+CM_ SG_ 705 FC_Faults_H2_Opressure "H2 Supply Over Pressure Fault";
+CM_ SG_ 705 FC_Faults_H2_Upressure "H2 Supply Under Pressure Fault";
+CM_ SG_ 705 FC_Alarms_H2_PSensRange "H2 Pressure Sensor Out of Range Alarm";
+CM_ SG_ 705 FC_Alarms_AirFlowRange "Air Flow Out of Range Alarm";
+CM_ SG_ 705 FC_Alarms_CsenseRange "Current Sensor Out of Range Alarm";
+CM_ SG_ 705 FC_Alarms_CoolTempHigh "Coolant Temperature High Alarm";
+CM_ SG_ 705 FC_Alarms_OverPower "System Over-Power Alarm";
+CM_ SG_ 705 FC_Alarms_NonRun "Air Flow in a Non-Run State Alarm";
+CM_ SG_ 705 FC_Alarms_BlowFlow "Blower Low Flow Alarm";
+CM_ SG_ 705 FC_Alarms_AnPumpSpeed "Anode Pump Over/Under Speed Alarm";
+CM_ SG_ 705 FC_Alarms_CoolTemp "Coolant Temp. Out of Range Alarm";
+CM_ SG_ 705 FC_Alarms_BlowVoltLow "Blower Low Voltage Alarm";
+CM_ SG_ 705 FC_Alarms_Recovery "Recovery Alarm";
+CM_ SG_ 705 FC_Alarms_CoolFlow "Coolant Low Flow Alarm";
+CM_ SG_ 705 FC_StackLowC "Stack Low Current Alarm";
+CM_ SG_ 705 FC_Alarms_eFCVM_Finger "eFCVM Bad Finger Alarm";
+CM_ SG_ 705 FC_Alarms_EEPROM "EEPROM Error Alarm";
+CM_ SG_ 705 FC_Alarms_EMP_Pump "EMP Pump Alarm";
 CM_ SG_ 801 Xsense_FilterMode "Mask for the 3 bit filter mode field. Values: 0 false 1 true ";
 CM_ SG_ 801 Xsense_NoRotation "Values: 1 Aborted 2 SamplesRejected 3 RunningNormally ";
 CM_ SG_ 801 Xsense_RtkStatus "Mask for 2 bit RTK status field. Values: 0 No RTK 1 RTK floating 2 RTK fixed ";
@@ -323,7 +323,7 @@ CM_ SG_ 801 OrientationValid "Set when the computed orientation is valid. The or
 CM_ SG_ 801 GpsValid "Set when the device has a GPS receiver and the receiver says that there is a GPS position fix.. Values: 0 false 1 true ";
 CM_ SG_ 801 RepresentativeMotion "Indicates if the In-Run Compass Calibration is doing the representative motion analysis. Values: 0 false 1 true ";
 CM_ SG_ 801 ExternalClockSynced "Indicates whether the internal clock is synced with an external clock (Either GNNS or custom provided clock sync). Values: 0 false 1 true ";
-CM_ BO_ 832 "Coolant Temperature Transmission from the PDC";
+CM_ BO_ 833 "Coolant Temperature Transmission from the PDC";
 CM_ BU_ imc_BUSFX_2_133754 "Serial number: 133754
 Slot number: 1
 Node number: 1";
@@ -345,8 +345,8 @@ BA_ "GenMsgCycleTimeus" BO_ 301 100000;
 BA_ "GenMsgCycleTimeus" BO_ 302 100000;
 BA_ "GenMsgCycleTimeus" BO_ 303 100000;
 BA_ "GenMsgCycleTimeus" BO_ 500 100000;
-BA_ "GenMsgCycleTimeus" BO_ 576 200000;
-BA_ "GenMsgCycleTimeus" BO_ 704 100000;
+BA_ "GenMsgCycleTimeus" BO_ 577 200000;
+BA_ "GenMsgCycleTimeus" BO_ 705 100000;
 BA_ "GenMsgCycleTimeus" BO_ 800 100000;
 BA_ "GenMsgCycleTimeus" BO_ 801 100000;
 BA_ "GenMsgCycleTimeus" BO_ 802 100000;
@@ -356,6 +356,6 @@ BA_ "GenMsgCycleTimeus" BO_ 805 100000;
 BA_ "GenMsgCycleTimeus" BO_ 806 100000;
 BA_ "GenMsgCycleTimeus" BO_ 807 100000;
 BA_ "GenMsgCycleTimeus" BO_ 808 100000;
-BA_ "GenMsgCycleTimeus" BO_ 832 200000;
+BA_ "GenMsgCycleTimeus" BO_ 833 200000;
 BA_ "GenMsgCycleTimeus" BO_ 1313 10000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
