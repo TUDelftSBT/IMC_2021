@@ -289,7 +289,11 @@ BO_ 1 BMS_CellBallancing: 8 Sender__XXX
 BO_ 45 BMS_SOC: 8 Sender__XXX
  SG_ BMS_SOC_Current : 7|16@0- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ BMS_SOC_EstimatedCharge : 23|16@0- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "Ah"  imc_BUSFX_2_133754
- SG_ EMS_SOC_EstimatedStateOfCharge : 48|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] "%"  imc_BUSFX_2_133754
+ SG_ BMS_SOC_EstimatedStateOfCharge : 48|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] "%"  imc_BUSFX_2_133754
+
+BO_ 304 EMS_isometer: 2 Sender__XXX
+ SG_ EMS_isometer_freq : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] "Hz"  imc_BUSFX_2_133754
+ SG_ EMS_isometer_DutyCycle : 8|8@1+ (3.921568627E-3,0.000000000E+0) [0.000000000E+0|1.000000000E+0] "%"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ SG_ 577 FC_State_Callowed "Current Draw Allowed";
@@ -393,3 +397,4 @@ BA_ "GenMsgCycleTimeus" BO_ 41 100000;
 BA_ "GenMsgCycleTimeus" BO_ 48 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1 100000;
 BA_ "GenMsgCycleTimeus" BO_ 45 100000;
+BA_ "GenMsgCycleTimeus" BO_ 304 100000;
