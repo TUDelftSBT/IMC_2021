@@ -265,15 +265,15 @@ BO_ 1600 HydrogenSensor: 8 Sender__XXX
 
 BO_ 40 BMS_Overall: 8 Sender__XXX
  SG_ BMS_Overall_NumbOfCellsLSB : 56|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
- SG_ BMS_Overall_NumbOfCellsMSB : 16|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ BMS_Overall_NumbOfCellsMSB : 16|8@1+ (2.560000000E+2,0.000000000E+0) [0.000000000E+0|6.528000000E+4] ""  imc_BUSFX_2_133754
 
 BO_ 41 BMS_Parameters: 8 Sender__XXX
  SG_ BMS_Voltage_MinCellVoltage : 0|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_MaxCellVoltage : 8|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_AvrCellVoltage : 16|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
- SG_ BMS_Voltage_TotalVbyte0 : 40|8@1+ (1.658137500E+5,0.000000000E+0) [0.000000000E+0|4.228250625E+7] "V"  imc_BUSFX_2_133754
- SG_ BMS_Voltage_TotalVbyte1 : 24|8@1+ (6.502500000E+2,0.000000000E+0) [0.000000000E+0|1.658137500E+5] "V"  imc_BUSFX_2_133754
- SG_ BMS_Voltage_TotalVbyte2 : 48|8@1+ (2.550000000E+0,0.000000000E+0) [0.000000000E+0|6.502500000E+2] "V"  imc_BUSFX_2_133754
+ SG_ BMS_Voltage_TotalVbyte0 : 40|8@1+ (1.677721600E+5,0.000000000E+0) [0.000000000E+0|4.278190080E+7] "V"  imc_BUSFX_2_133754
+ SG_ BMS_Voltage_TotalVbyte1 : 24|8@1+ (6.553600000E+2,0.000000000E+0) [0.000000000E+0|1.671168000E+5] "V"  imc_BUSFX_2_133754
+ SG_ BMS_Voltage_TotalVbyte2 : 48|8@1+ (2.560000000E+0,0.000000000E+0) [0.000000000E+0|6.528000000E+2] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_TotalVbyte3 : 32|8@1+ (1.000000000E-2,0.000000000E+0) [0.000000000E+0|2.550000000E+0] "V"  imc_BUSFX_2_133754
 
 BO_ 48 BMS_CellTemp: 8 Sender__XXX
@@ -347,6 +347,8 @@ CM_ SG_ 801 GpsValid "Set when the device has a GPS receiver and the receiver sa
 CM_ SG_ 801 RepresentativeMotion "Indicates if the In-Run Compass Calibration is doing the representative motion analysis. Values: 0 false 1 true ";
 CM_ SG_ 801 ExternalClockSynced "Indicates whether the internal clock is synced with an external clock (Either GNNS or custom provided clock sync). Values: 0 false 1 true ";
 CM_ BO_ 833 "Coolant Temperature Transmission from the PDC";
+CM_ SG_ 40 BMS_Overall_NumbOfCellsLSB "Add MSB and LSB to get total";
+CM_ SG_ 40 BMS_Overall_NumbOfCellsMSB "Add MSB and LSB to get total";
 CM_ SG_ 41 BMS_Voltage_TotalVbyte0 "Add all bytes to get total";
 CM_ SG_ 41 BMS_Voltage_TotalVbyte1 "Add all bytes to get total";
 CM_ SG_ 41 BMS_Voltage_TotalVbyte2 "Add all bytes to get total";
