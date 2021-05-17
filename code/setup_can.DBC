@@ -281,7 +281,7 @@ BO_ 48 BMS_CellTemp: 8 Sender__XXX
  SG_ BMS_CellTemp_Max : 8|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
  SG_ BMS_CellTemp_Avg : 16|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
 
-BO_ 1 BMS_CellBallancing: 8 Sender__XXX
+BO_ 43 BMS_CellBallancing: 8 Sender__XXX
  SG_ BMS_CellBallancing_Max : 8|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
  SG_ BMS_CellBallancing_Min : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
  SG_ BMS_CellBallancing_Avg : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
@@ -395,6 +395,6 @@ BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
 BA_ "GenMsgCycleTimeus" BO_ 40 100000;
 BA_ "GenMsgCycleTimeus" BO_ 41 100000;
 BA_ "GenMsgCycleTimeus" BO_ 48 100000;
-BA_ "GenMsgCycleTimeus" BO_ 1 100000;
+BA_ "GenMsgCycleTimeus" BO_ 43 100000;
 BA_ "GenMsgCycleTimeus" BO_ 45 100000;
 BA_ "GenMsgCycleTimeus" BO_ 304 100000;
