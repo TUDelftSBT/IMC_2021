@@ -1,7 +1,7 @@
 FileVersion=1
 FileFormat=2
 FileSubFormat=1
-FileMagic=12345732
+FileMagic=12345735
 imcDevicesVersion=1
 SoftwareVersion=2 13 11
 DeviceVersion=1 13
@@ -1788,7 +1788,7 @@ LogSendChannels=1
 		Comment=""
 		Bitmap=0
 		IsListSel=1
-		Format=1
+		Format=0
 		ChanState=0
 		ChanIndex=0
 		MonChanIndex=0
