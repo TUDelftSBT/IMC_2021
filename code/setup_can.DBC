@@ -93,7 +93,7 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSFE_dashboard_nc : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_H2sens_nc : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_hydrogenPerc_high : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_emerShutdown : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_cbtrip : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMS_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowPortOloop_extrLow : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowStarOloop_eLow : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -141,7 +141,7 @@ BO_ 302 EMS_flow: 6 Sender__XXX
 
 BO_ 303 EMS_OthADC: 8 Sender__XXX
  SG_ EMS_OthADC_TankPress : 23|16@0+ (6.836041810E-3,0.000000000E+0) [0.000000000E+0|4.480000000E+2] "Bar"  imc_BUSFX_2_133754
- SG_ EMS_OthADC_TankTemp : 7|16@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] "C"  imc_BUSFX_2_133754
+ SG_ EMS_OthADC_TankTemp : 7|16@0+ (2.288853280E-3,0.000000000E+0) [0.000000000E+0|1.499999997E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_OFF : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
