@@ -93,7 +93,7 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSFE_dashboard_nc : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_H2sens_nc : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_hydrogenPerc_high : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_emerShutdown : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_cbtrip : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMS_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowPortOloop_extrLow : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowStarOloop_eLow : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
