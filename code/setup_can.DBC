@@ -54,10 +54,10 @@ BO_ 202 WC_FlowTemp: 6 Sender__XXX
  SG_ WC_FlowTemp_StarOloop : 32|16@1+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 203 WC_version: 4 WC
+ SG_ WC_version_YY : 0|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
+ SG_ WC_version_MM : 8|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
  SG_ WC_version_DD : 16|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
  SG_ WC_version_ID : 24|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
- SG_ WC_version_MM : 8|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
- SG_ WC_version_YY : 0|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
 
 BO_ 250 WC_V24temp_1: 6 Sender__XXX
  SG_ WC_V24temp1_1 : 0|16@1+ (2.288853280E-3,0.000000000E+0) [0.000000000E+0|1.499999997E+2] "C"  imc_BUSFX_2_133754
@@ -65,8 +65,8 @@ BO_ 250 WC_V24temp_1: 6 Sender__XXX
  SG_ WC_V24temp1_3 : 32|16@1+ (2.288853280E-3,0.000000000E+0) [0.000000000E+0|1.499999997E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 251 WC_V24temp2: 6 Sender__XXX
- SG_ WC_V24temp2_1 : 16|16@1- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
  SG_ WC_V24temp2_2 : 0|16@1- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
+ SG_ WC_V24temp2_1 : 16|16@1- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
  SG_ WC_V24temp2_3 : 32|16@1- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
 
 BO_ 252 WC_V24Vsense: 6 Sender__XXX
@@ -93,7 +93,7 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSFE_dashboard_nc : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_H2sens_nc : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_hydrogenPerc_high : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_emerShutdown : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_CBtrip : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMS_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowPortOloop_extrLow : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_flowStarOloop_eLow : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -102,6 +102,7 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSFE_v24Temp_extrHigh : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_cellT_extrLow : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_LastFatalError : 8|5@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.100000000E+1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_cellT_extrHigh : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_TbattLoop_extrHigh : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_TportOloop_extrHigh : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -129,19 +130,22 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMS_tempMotorLoop_high : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_FATAL_ERROR : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_Error_charge_full : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_LastFatalError : 8|5@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.100000000E+1] ""  imc_BUSFX_2_133754
 
 BO_ 301 EMS_FlowTemp: 4 Sender__XXX
- SG_ EMS_FlowTemp_dcdc : 23|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
  SG_ EMS_FlowTemp_motorLoop : 7|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ EMS_FlowTemp_dcdc : 23|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 302 EMS_flow: 6 Sender__XXX
  SG_ EMS_flow_dcdc : 0|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038147E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
  SG_ EMS_flow_motorLoop : 16|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038147E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 303 EMS_OthADC: 8 Sender__XXX
- SG_ EMS_OthADC_TankPress : 23|16@0+ (6.836041810E-3,0.000000000E+0) [0.000000000E+0|4.480000000E+2] "Bar"  imc_BUSFX_2_133754
  SG_ EMS_OthADC_TankTemp : 7|16@0- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
+ SG_ EMS_OthADC_TankPress : 23|16@0+ (6.836041810E-3,0.000000000E+0) [0.000000000E+0|4.480000000E+2] "Bar"  imc_BUSFX_2_133754
+
+BO_ 304 EMS_isometer: 2 Sender__XXX
+ SG_ EMS_isometer_freq : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] "Hz"  imc_BUSFX_2_133754
+ SG_ EMS_isometer_DutyCycle : 8|8@1+ (3.921568627E-3,0.000000000E+0) [0.000000000E+0|9.999999999E-1] "%"  imc_BUSFX_2_133754
 
 BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_OFF : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -197,8 +201,6 @@ BO_ 800 Xsense_SampleTime: 4 Xsens_Sensor
 
 BO_ 801 Xsense_StatusWord: 4 Xsens_Sensor
  SG_ Xsense_FilterMode : 1|3@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|7.000000000E+0] ""  imc_BUSFX_2_133754
- SG_ Xsense_NoRotation : 28|2@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
- SG_ Xsense_RtkStatus : 4|2@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
  SG_ HaveGnssTimePulse : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ ClipMagZ : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ Retransmitted : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -215,16 +217,16 @@ BO_ 801 Xsense_StatusWord: 4 Xsens_Sensor
  SG_ ClipMagX : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ ClipMagY : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ SelfTestOk : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ Xsense_RtkStatus : 4|2@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
  SG_ OrientationValid : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ GpsValid : 26|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ RepresentativeMotion : 29|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ ExternalClockSynced : 30|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
-
-BO_ 802 Xsense_Error: 1 Xsens_Sensor
+ SG_ Xsense_NoRotation : 28|2@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
 
 BO_ 803 Xsense_EulerAngles: 6 Xsens_Sensor
- SG_ Xsense_pitch : 23|16@0- (7.812500000E-3,0.000000000E+0) [-2.560000000E+2|2.559921875E+2] "deg"  imc_BUSFX_2_133754
  SG_ Xsense_roll : 7|16@0- (7.812500000E-3,0.000000000E+0) [-2.560000000E+2|2.559921875E+2] "deg"  imc_BUSFX_2_133754
+ SG_ Xsense_pitch : 23|16@0- (7.812500000E-3,0.000000000E+0) [-2.560000000E+2|2.559921875E+2] "deg"  imc_BUSFX_2_133754
  SG_ Xsense_yaw : 39|16@0- (7.812500000E-3,0.000000000E+0) [-2.560000000E+2|2.559921875E+2] "deg"  imc_BUSFX_2_133754
 
 BO_ 804 Xsense_DeltaQ: 8 Xsens_Sensor
@@ -234,10 +236,10 @@ BO_ 804 Xsense_DeltaQ: 8 Xsens_Sensor
  SG_ Xsense_DeltaQ4 : 55|16@0- (3.051850948E-5,0.000000000E+0) [-1.000030519E+0|1.000000000E+0] "m/s2"  imc_BUSFX_2_133754
 
 BO_ 805 Xsense_DeltaV: 7 Xsens_Sensor
- SG_ Xsense_Exponent : 55|8@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
  SG_ Xsense_X : 7|16@0- (7.629394531E-6,0.000000000E+0) [-2.500000000E-1|2.499923706E-1] "m/s"  imc_BUSFX_2_133754
  SG_ Xsense_Y : 23|16@0- (7.629394531E-6,0.000000000E+0) [-2.500000000E-1|2.499923706E-1] "m/s"  imc_BUSFX_2_133754
  SG_ Xsense_Z : 39|16@0- (7.629394531E-6,0.000000000E+0) [-2.500000000E-1|2.499923706E-1] "m/s"  imc_BUSFX_2_133754
+ SG_ Xsense_Exponent : 55|8@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
 
 BO_ 806 Xsense_RateOfTurn: 6 Xsens_Sensor
  SG_ Xsense_gyrX : 7|16@0- (1.953125000E-3,0.000000000E+0) [-6.400000000E+1|6.399804688E+1] "rad/s"  imc_BUSFX_2_133754
@@ -260,40 +262,36 @@ BO_ 833 FC_Temp: 8 Sender__XXX
 BO_ 1313 Shunt_Current: 6 Sender__XXX
  SG_ Shunt_Current_msg : 23|32@0+ (1.000000000E-3,0.000000000E+0) [0.000000000E+0|4.294967295E+6] "A"  imc_BUSFX_2_133754
 
-BO_ 1600 HydrogenSensor: 8 Sender__XXX
- SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
-
 BO_ 1400 BMS_Overall: 8 Sender__XXX
- SG_ BMS_Overall_NumbOfCellsLSB : 56|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
  SG_ BMS_Overall_NumbOfCellsMSB : 16|8@1+ (2.560000000E+2,0.000000000E+0) [0.000000000E+0|6.528000000E+4] ""  imc_BUSFX_2_133754
+ SG_ BMS_Overall_NumbOfCellsLSB : 56|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
 
 BO_ 1401 BMS_Parameters: 8 Sender__XXX
  SG_ BMS_Voltage_MinCellVoltage : 0|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_MaxCellVoltage : 8|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_AvrCellVoltage : 16|8@1+ (1.000000000E-2,2.000000000E+0) [2.000000000E+0|4.550000000E+0] "V"  imc_BUSFX_2_133754
- SG_ BMS_Voltage_TotalVbyte0 : 40|8@1+ (1.677721600E+5,0.000000000E+0) [0.000000000E+0|4.278190080E+7] "V"  imc_BUSFX_2_133754
- SG_ BMS_Voltage_TotalVbyte1 : 40|8@1+ (6.553600000E+2,0.000000000E+0) [0.000000000E+0|1.671168000E+5] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_TotalVbyte2 : 24|8@1+ (2.560000000E+0,0.000000000E+0) [0.000000000E+0|6.528000000E+2] "V"  imc_BUSFX_2_133754
  SG_ BMS_Voltage_TotalVbyte3 : 32|8@1+ (1.000000000E-2,0.000000000E+0) [0.000000000E+0|2.550000000E+0] "V"  imc_BUSFX_2_133754
-
-BO_ 1408 BMS_CellTemp: 8 Sender__XXX
- SG_ BMS_CellTemp_Min : 0|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
- SG_ BMS_CellTemp_Max : 8|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
- SG_ BMS_CellTemp_Avg : 16|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ BMS_Voltage_TotalVbyte0 : 40|8@1+ (1.677721600E+5,0.000000000E+0) [0.000000000E+0|4.278190080E+7] "V"  imc_BUSFX_2_133754
+ SG_ BMS_Voltage_TotalVbyte1 : 40|8@1+ (6.553600000E+2,0.000000000E+0) [0.000000000E+0|1.671168000E+5] "V"  imc_BUSFX_2_133754
 
 BO_ 1403 BMS_CellBallancing: 8 Sender__XXX
- SG_ BMS_CellBallancing_Max : 8|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
- SG_ BMS_CellBallancing_Min : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
- SG_ BMS_CellBallancing_Avg : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|1.000000000E+2] "%"  imc_BUSFX_2_133754
+ SG_ BMS_CellBallancing_Avg : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|9.999999999E+1] "%"  imc_BUSFX_2_133754
+ SG_ BMS_CellBallancing_Min : 0|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|9.999999999E+1] "%"  imc_BUSFX_2_133754
+ SG_ BMS_CellBallancing_Max : 8|8@1+ (3.921568627E-1,0.000000000E+0) [0.000000000E+0|9.999999999E+1] "%"  imc_BUSFX_2_133754
 
 BO_ 1405 BMS_SOC: 8 Sender__XXX
  SG_ BMS_SOC_Current : 7|16@0- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ BMS_SOC_EstimatedCharge : 23|16@0- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "Ah"  imc_BUSFX_2_133754
  SG_ BMS_SOC_EstimatedStateOfCharge : 48|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] "%"  imc_BUSFX_2_133754
 
-BO_ 304 EMS_isometer: 2 Sender__XXX
- SG_ EMS_isometer_freq : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] "Hz"  imc_BUSFX_2_133754
- SG_ EMS_isometer_DutyCycle : 8|8@1+ (3.921568627E-3,0.000000000E+0) [0.000000000E+0|1.000000000E+0] "%"  imc_BUSFX_2_133754
+BO_ 1408 BMS_CellTemp: 8 Sender__XXX
+ SG_ BMS_CellTemp_Min : 0|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ BMS_CellTemp_Max : 8|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ BMS_CellTemp_Avg : 16|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
+
+BO_ 1600 HydrogenSensor: 8 Sender__XXX
+ SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ SG_ 577 FC_State_Callowed "Current Draw Allowed";
@@ -328,8 +326,6 @@ CM_ SG_ 705 FC_Alarms_eFCVM_Finger "eFCVM Bad Finger Alarm";
 CM_ SG_ 705 FC_Alarms_EEPROM "EEPROM Error Alarm";
 CM_ SG_ 705 FC_Alarms_EMP_Pump "EMP Pump Alarm";
 CM_ SG_ 801 Xsense_FilterMode "Mask for the 3 bit filter mode field. Values: 0 false 1 true ";
-CM_ SG_ 801 Xsense_NoRotation "Values: 1 Aborted 2 SamplesRejected 3 RunningNormally ";
-CM_ SG_ 801 Xsense_RtkStatus "Mask for 2 bit RTK status field. Values: 0 No RTK 1 RTK floating 2 RTK fixed ";
 CM_ SG_ 801 HaveGnssTimePulse "Indicates that the 1PPS GNSS time pulse is present. Values: 0 false 1 true ";
 CM_ SG_ 801 ClipMagZ "Indicates if there was clipping on the Z-axis of the magnetometer. Values: 0 false 1 true ";
 CM_ SG_ 801 Retransmitted "When set Indicates the sample was received as a retransmission. Values: 0 false 1 true ";
@@ -346,17 +342,19 @@ CM_ SG_ 801 ClipGyrZ "Indicates if there was clipping on the Z-axis of the gyros
 CM_ SG_ 801 ClipMagX "Indicates if there was clipping on the X-axis of the magnetometer. Values: 0 false 1 true ";
 CM_ SG_ 801 ClipMagY "Indicates if there was clipping on the Y-axis of the magnetometer. Values: 0 false 1 true ";
 CM_ SG_ 801 SelfTestOk "Set when the self test result was ok. Values: 0 false 1 true ";
+CM_ SG_ 801 Xsense_RtkStatus "Mask for 2 bit RTK status field. Values: 0 No RTK 1 RTK floating 2 RTK fixed ";
 CM_ SG_ 801 OrientationValid "Set when the computed orientation is valid. The orientation may be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 true ";
 CM_ SG_ 801 GpsValid "Set when the device has a GPS receiver and the receiver says that there is a GPS position fix.. Values: 0 false 1 true ";
 CM_ SG_ 801 RepresentativeMotion "Indicates if the In-Run Compass Calibration is doing the representative motion analysis. Values: 0 false 1 true ";
 CM_ SG_ 801 ExternalClockSynced "Indicates whether the internal clock is synced with an external clock (Either GNNS or custom provided clock sync). Values: 0 false 1 true ";
+CM_ SG_ 801 Xsense_NoRotation "Values: 1 Aborted 2 SamplesRejected 3 RunningNormally ";
 CM_ BO_ 833 "Coolant Temperature Transmission from the PDC";
-CM_ SG_ 1400 BMS_Overall_NumbOfCellsLSB "Add MSB and LSB to get total";
 CM_ SG_ 1400 BMS_Overall_NumbOfCellsMSB "Add MSB and LSB to get total";
-CM_ SG_ 1401 BMS_Voltage_TotalVbyte0 "Add all bytes to get total";
-CM_ SG_ 1401 BMS_Voltage_TotalVbyte1 "Add all bytes to get total";
+CM_ SG_ 1400 BMS_Overall_NumbOfCellsLSB "Add MSB and LSB to get total";
 CM_ SG_ 1401 BMS_Voltage_TotalVbyte2 "Add all bytes to get total";
 CM_ SG_ 1401 BMS_Voltage_TotalVbyte3 "Add all bytes to get total";
+CM_ SG_ 1401 BMS_Voltage_TotalVbyte0 "Add all bytes to get total";
+CM_ SG_ 1401 BMS_Voltage_TotalVbyte1 "Add all bytes to get total";
 CM_ BU_ imc_BUSFX_2_133754 "Serial number: 133754
 Slot number: 1
 Node number: 1";
@@ -377,12 +375,12 @@ BA_ "GenMsgCycleTimeus" BO_ 300 100000;
 BA_ "GenMsgCycleTimeus" BO_ 301 100000;
 BA_ "GenMsgCycleTimeus" BO_ 302 100000;
 BA_ "GenMsgCycleTimeus" BO_ 303 100000;
+BA_ "GenMsgCycleTimeus" BO_ 304 100000;
 BA_ "GenMsgCycleTimeus" BO_ 500 100000;
 BA_ "GenMsgCycleTimeus" BO_ 577 200000;
 BA_ "GenMsgCycleTimeus" BO_ 705 100000;
 BA_ "GenMsgCycleTimeus" BO_ 800 100000;
 BA_ "GenMsgCycleTimeus" BO_ 801 100000;
-BA_ "GenMsgCycleTimeus" BO_ 802 100000;
 BA_ "GenMsgCycleTimeus" BO_ 803 100000;
 BA_ "GenMsgCycleTimeus" BO_ 804 100000;
 BA_ "GenMsgCycleTimeus" BO_ 805 100000;
@@ -391,10 +389,9 @@ BA_ "GenMsgCycleTimeus" BO_ 807 100000;
 BA_ "GenMsgCycleTimeus" BO_ 808 100000;
 BA_ "GenMsgCycleTimeus" BO_ 833 200000;
 BA_ "GenMsgCycleTimeus" BO_ 1313 10000;
-BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1400 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1401 100000;
-BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1403 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1405 100000;
-BA_ "GenMsgCycleTimeus" BO_ 304 100000;
+BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
+BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
