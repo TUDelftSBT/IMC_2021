@@ -3736,7 +3736,7 @@ LogSendChannels=1
 		IsErrHand=0
 		ErrHandVal=0
 
-		AnalogChan="BMS_Voltage_TotalVbyte2"
+		AnalogChan="BMS_Voltage_TotalVbyte1"
 		ExtractedName="*"
 		Comment="Add all bytes to get total"
 		Bitmap=0
@@ -3769,7 +3769,7 @@ LogSendChannels=1
 		IsErrHand=0
 		ErrHandVal=0
 
-		AnalogChan="BMS_Voltage_TotalVbyte1"
+		AnalogChan="BMS_Voltage_TotalVbyte2"
 		ExtractedName="*"
 		Comment="Add all bytes to get total"
 		Bitmap=0
