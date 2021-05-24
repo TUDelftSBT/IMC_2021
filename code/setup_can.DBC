@@ -87,31 +87,31 @@ BO_ 253 WC_V24CSense: 6 Sender__XXX
 
 BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSFE_cellV_extrLow : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_cellV_extrHigh : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_cellV_extrHigh : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_WC_nc : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_steer_nc : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_dashboard_nc : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_H2sens_nc : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_hydrogenPerc_high : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_hydrogenPerc_high : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_CBtrip : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_BMS_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowPortOloop_extrLow : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowStarOloop_eLow : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowDCDC_extLow : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowMotor_extLow : 19|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_v24Temp_extrHigh : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_cellT_extrLow : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_BMSslave_nc : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_flowPortOloop_extrLow : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_flowStarOloop_eLow : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_FlowDCDC_extLow : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_flowMotor_extLow : 19|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_NumbCellsLow : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_isolation : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_LastFatalError : 8|5@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.100000000E+1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_cellT_extrHigh : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_TbattLoop_extrHigh : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_TportOloop_extrHigh : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_TStarOloopExtrHigh : 26|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_tDCDCloopExtrHigh : 27|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_tFCloop_extrHigh : 28|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_TmotorLoop_extrHigh : 29|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowFuelcell_extrLow : 30|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_flowBat_extrLow : 31|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_TbattLoop_extrHigh : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_TportOloop_extrHigh : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_TStarOloopExtrHigh : 26|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_tDCDCloopExtrHigh : 27|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_DCDC_nc : 28|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_TmotorLoop_extrHigh : 29|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_fFuelcell_nc : 30|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_flowBat_extrLow : 31|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_v24_tempLow : 32|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_v24temp_high : 33|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_v24voltage_low : 34|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -119,6 +119,8 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMS_cellTemp_low : 36|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellTemp_high : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_low : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_high : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_overcurrent : 40|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_motorTemp_high : 41|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -126,10 +128,11 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMS_TempPortOloop_high : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_tempStarOloop_high : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_tempDCDCloop_high : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_tempFuelcellLoop_high : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_tankpressure_low : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_tempMotorLoop_high : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_FATAL_ERROR : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_Error_charge_full : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_TankTemp_high : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ skip_deze : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 301 EMS_FlowTemp: 4 Sender__XXX
  SG_ EMS_FlowTemp_motorLoop : 7|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
@@ -165,6 +168,7 @@ BO_ 577 FC_State: 8 Sender__XXX
  SG_ FC_State_Callowed : 16|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Cstack : 32|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Vstack : 48|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "V"  imc_BUSFX_2_133754
+ SG_ FC_State_Readback : 8|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
 
 BO_ 705 FC_FaultsAlarms: 8 Sender__XXX
  SG_ FC_Faults_UnderV : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -260,7 +264,7 @@ BO_ 833 FC_Temp: 8 Sender__XXX
  SG_ FC_Temp_CoolantSetPoint : 16|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
 
 BO_ 1313 Shunt_Current: 6 Sender__XXX
- SG_ Shunt_Current_msg : 23|32@0+ (1.000000000E-3,0.000000000E+0) [0.000000000E+0|4.294967295E+6] "A"  imc_BUSFX_2_133754
+ SG_ Shunt_Current_msg : 16|32@1+ (1.000000000E-3,0.000000000E+0) [0.000000000E+0|4.294967295E+6] "A"  imc_BUSFX_2_133754
 
 BO_ 1400 BMS_Overall: 8 Sender__XXX
  SG_ BMS_Overall_NumbOfCellsMSB : 16|8@1+ (2.560000000E+2,0.000000000E+0) [0.000000000E+0|6.528000000E+4] ""  imc_BUSFX_2_133754
