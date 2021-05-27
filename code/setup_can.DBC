@@ -23,8 +23,121 @@ NS_ :
 
 BS_:
 
-BU_: Sender__XXX imc_BUSFX_2_133754 WC Xsens_Sensor
+BU_: BDC546 imc_BUSFX_2_133754 Sender__XXX WC Xsens_Sensor
 
+
+BO_ 16 DCDC_1: 8 BDC546
+ SG_ BDC_ILS_max_Lim : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_ILS_min_Lim : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_ULS_max_Lim : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_ULS_min_Lim : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_IHS_max_Lim : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_IHS_min_Lim : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_UHS_max_Lim : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_UHS_min_Lim : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Ready : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Running : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Warning : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Error : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ DCDC_ILS_act : 23|12@0+ (2.500000000E-1,-5.120000000E+2) [-5.120000000E+2|5.117500000E+2] "A"  imc_BUSFX_2_133754
+ SG_ DCDC_IHS_act : 27|12@0+ (2.500000000E-1,-5.120000000E+2) [-5.120000000E+2|5.117500000E+2] "A"  imc_BUSFX_2_133754
+ SG_ DCDC_ULS_act : 47|12@0+ (2.500000000E-1,0.000000000E+0) [0.000000000E+0|1.023750000E+3] "V"  imc_BUSFX_2_133754
+ SG_ DCDC_UHS_act : 51|12@0+ (2.500000000E-1,0.000000000E+0) [0.000000000E+0|1.023750000E+3] "V"  imc_BUSFX_2_133754
+
+BO_ 17 DCDC_2: 8 BDC546
+ SG_ DCDC_ILS_available : 7|12@0+ (2.500000000E-1,0.000000000E+0) [0.000000000E+0|1.023750000E+3] "A"  imc_BUSFX_2_133754
+ SG_ DCDC_T_Index : 11|4@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ DCDC_T : 23|8@0+ (1.000000000E+0,-4.000000000E+1) [-4.000000000E+1|2.150000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ DCDC_T_max : 31|8@0+ (1.000000000E+0,-4.000000000E+1) [-4.000000000E+1|2.150000000E+2] "C"  imc_BUSFX_2_133754
+ SG_ DCDC_ULS_act_red : 39|12@0+ (2.500000000E-1,0.000000000E+0) [0.000000000E+0|1.023750000E+3] "V"  imc_BUSFX_2_133754
+ SG_ DCDC_UHS_act_red : 43|12@0+ (2.500000000E-1,0.000000000E+0) [0.000000000E+0|1.023750000E+3] "V"  imc_BUSFX_2_133754
+
+BO_ 18 DCDC_3: 8 BDC546
+ SG_ BDC_Err_RedNegLS : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_RedPosLS : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_PyroMC : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_TempSens : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_Interlock : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_ISensLS : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_ISensHS : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_BDCMode : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_IHS2ILS : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_RedNegHS : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_RedPosHS : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_Timeout_Recv3 : 19|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_Timeout_Recv2 : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_Timeout_Recv1 : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_CANValue : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_IntSupply : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_FPGA : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_NVSRam : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_Flash : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_EEProm : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_HW_FPGA_Ver : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_CANTx : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_CANRx : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_CANOff : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_OvltSky : 29|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_OvltLS : 30|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_OvltHS : 31|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempIndD : 32|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempIndC : 33|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempIndB : 34|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempIndA : 35|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_Reset : 36|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_IMax : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_Watchdog : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL2x : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL1y : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL1x : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_Err_FPGA_NVM : 28|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL4y : 40|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL4x : 41|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL3y : 42|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL3x : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_TempL2y : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_HSOvervoltage : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_NoIntSupply : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_NoHV_UHS : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_WrongFPGA : 51|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_WrongHW : 52|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_PyroVCneg : 53|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_PyroVCpos : 54|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_Discharge : 55|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_CAN_Timeout : 62|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_War_LSOvervoltage : 63|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+
+BO_ 19 DCDC_4: 8 BDC546
+ SG_ BDC_FPGA_SsErr0 : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr1 : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr2 : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr3 : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr4 : 4|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr5 : 5|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr6 : 6|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_SsErr7 : 7|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr0 : 8|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr1 : 9|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr2 : 10|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr3 : 11|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr4 : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr5 : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr6 : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_ILmaxErr7 : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_UBmaxErr : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_UA1maxErr : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_U15VmaxErr : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_IBmaxErr : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_GenRglPer : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_IllegalAccess : 27|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_Hw_Err0 : 28|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ BDC_FPGA_Hw_Err1 : 29|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ DCDC_FPGA_IntStatUnused3 : 22|4@0- (1.000000000E+0,0.000000000E+0) [-8.000000000E+0|7.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ DCDC_FPGA_IntStatUnused1 : 26|2@0- (1.000000000E+0,0.000000000E+0) [-2.000000000E+0|1.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ DCDC_FPGA_IntStatUnused2 : 31|2@0- (1.000000000E+0,0.000000000E+0) [-2.000000000E+0|1.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ DCDC_CAN_RXCNT : 39|8@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ DCDC_CAN_TXCNT : 47|8@0+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ DCDC_SG_IL_max : 55|16@0+ (3.125000000E-2,-1.024000000E+3) [-1.024000000E+3|1.023968750E+3] "A"  imc_BUSFX_2_133754
 
 BO_ 200 WC_Error: 2 Sender__XXX
  SG_ WC_circuitbreaker_trip : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -44,9 +157,9 @@ BO_ 200 WC_Error: 2 Sender__XXX
  SG_ WC_v24temp_extreme_high : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 201 WC_Flow: 6 Sender__XXX
- SG_ WC_Flow_batteryLoop : 0|16@1+ (7.814407800E-4,0.000000000E+0) [0.000000000E+0|5.121172152E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_PortOloop : 16|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_StarLoop : 32|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_batteryLoop : 7|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_PortOloop : 23|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_StarLoop : 39|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 202 WC_FlowTemp: 6 Sender__XXX
  SG_ WC_FlowTemp_BatteryLoop : 0|16@1+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
@@ -103,6 +216,20 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMSHE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_isolation : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_LastFatalError : 8|5@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.100000000E+1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_cellVoltage_high : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_overcurrent : 40|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_motorTemp_high : 41|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_TempBattLoop_high : 42|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_TempPortOloop_high : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_tempStarOloop_high : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_tempDCDCloop_high : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMSHE_tankpressure_low : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_tempMotorLoop_high : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_FATAL_ERROR : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_TankTemp_high : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ skip_deze : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_cellT_extrHigh : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_TbattLoop_extrHigh : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_TportOloop_extrHigh : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -119,28 +246,14 @@ BO_ 300 EMS_Error: 7 Sender__XXX
  SG_ EMS_cellTemp_low : 36|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellTemp_high : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_low : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_cellVoltage_high : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_overcurrent : 40|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_motorTemp_high : 41|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_TempBattLoop_high : 42|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_TempPortOloop_high : 43|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_tempStarOloop_high : 44|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_tempDCDCloop_high : 45|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMSHE_tankpressure_low : 46|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_tempMotorLoop_high : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_FATAL_ERROR : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_TankTemp_high : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ skip_deze : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 301 EMS_FlowTemp: 4 Sender__XXX
  SG_ EMS_FlowTemp_motorLoop : 7|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
  SG_ EMS_FlowTemp_dcdc : 23|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 302 EMS_flow: 6 Sender__XXX
- SG_ EMS_flow_dcdc : 0|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038147E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
- SG_ EMS_flow_motorLoop : 16|16@1- (7.629510948E-4,0.000000000E+0) [-2.500038147E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ EMS_flow_dcdc : 7|16@0- (7.629510948E-4,0.000000000E+0) [-2.500038148E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ EMS_flow_motorLoop : 23|16@0- (7.629510948E-4,0.000000000E+0) [-2.500038148E+1|2.499961852E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 303 EMS_OthADC: 8 Sender__XXX
  SG_ EMS_OthADC_TankTemp : 7|16@0- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
@@ -165,10 +278,10 @@ BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_5 : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 577 FC_State: 8 Sender__XXX
+ SG_ FC_State_Readback : 8|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
  SG_ FC_State_Callowed : 16|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Cstack : 32|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Vstack : 48|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "V"  imc_BUSFX_2_133754
- SG_ FC_State_Readback : 8|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] ""  imc_BUSFX_2_133754
 
 BO_ 705 FC_FaultsAlarms: 8 Sender__XXX
  SG_ FC_Faults_UnderV : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -298,6 +411,86 @@ BO_ 1600 HydrogenSensor: 8 Sender__XXX
  SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,0.000000000E+0) [-2.560000000E+0|2.540000000E+0] "%"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
+CM_ BO_ 16 "Msg 1 from BDC546 to SG (main message) 10ms";
+CM_ SG_ 16 BDC_ILS_max_Lim "Max low side current limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_ILS_min_Lim "Min low side current limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_ULS_max_Lim "Max low side voltage limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_ULS_min_Lim "Min low side voltage limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_IHS_max_Lim "Max high side current limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_IHS_min_Lim "Min high side current limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_UHS_max_Lim "Max high side voltage limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_UHS_min_Lim "Min high side voltage limiter active. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_Ready "BDC546 Ready. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_Running "BDC546 Running. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_Warning "BDC546 Warning. Values: 1 On 0 Off ";
+CM_ SG_ 16 BDC_Error "BDC546 Error. Values: 1 On 0 Off ";
+CM_ SG_ 16 DCDC_ILS_act "Low side current value";
+CM_ SG_ 16 DCDC_IHS_act "High side current value";
+CM_ SG_ 16 DCDC_ULS_act "Low side voltage value";
+CM_ SG_ 16 DCDC_UHS_act "High side voltage value";
+CM_ BO_ 17 "Msg 2 from BDC546 to SG (Values and Config) 200ms";
+CM_ SG_ 17 DCDC_ILS_available "Max low side current due to derating";
+CM_ SG_ 17 DCDC_T_Index "Measured temperature count (index)";
+CM_ SG_ 17 DCDC_T "Measured temperature at this index";
+CM_ SG_ 17 DCDC_T_max "Max measured temperatur BDC546";
+CM_ SG_ 17 DCDC_ULS_act_red "Redundant low side voltage value";
+CM_ SG_ 17 DCDC_UHS_act_red "Redundant high side voltage value";
+CM_ BO_ 18 "Msg 3 from BDC546 to SG (Errors and Warnings) 200ms";
+CM_ SG_ 18 BDC_Err_RedNegLS "BDC Error negative difference redundant voltage measurement low-side";
+CM_ SG_ 18 BDC_Err_RedPosLS "BDC Error positive difference redundant voltage measurement low-side";
+CM_ SG_ 18 BDC_Err_PyroMC "BDC Error Pyrofuse ignition";
+CM_ SG_ 18 BDC_Err_TempSens "BDC Error Temperatur sensors (at least two sensors defective)";
+CM_ SG_ 18 BDC_Err_Interlock "BDC Error Interlock detection";
+CM_ SG_ 18 BDC_Err_ISensLS "BDC Error current sensor low-side at initialisation";
+CM_ SG_ 18 BDC_Err_ISensHS "BDC Error current sensor high-side at initialisation";
+CM_ SG_ 18 BDC_Err_BDCMode "BDC Error Not the same mode between CAN and PARAM values";
+CM_ SG_ 18 BDC_Err_IHS2ILS "BDC Error plausibility IHS to ILS";
+CM_ SG_ 18 BDC_Err_RedNegHS "BDC Error negative difference redundant voltage measurement high-side";
+CM_ SG_ 18 BDC_Err_RedPosHS "BDC Error postive difference redundant voltage measurement high-side";
+CM_ SG_ 18 BDC_Err_Timeout_Recv3 "BDC Error message Recv3 timeout";
+CM_ SG_ 18 BDC_Err_Timeout_Recv2 "BDC Error message Recv2 timeout";
+CM_ SG_ 18 BDC_Err_Timeout_Recv1 "BDC Error message Recv1 timeout";
+CM_ SG_ 18 BDC_Err_CANValue "BDC Error received CAN signal with wrong value";
+CM_ SG_ 18 BDC_Err_IntSupply "BDC Error Internal supply (15V) not running if HV is connected";
+CM_ SG_ 18 BDC_Err_FPGA "BDC Error from FPGA";
+CM_ SG_ 18 BDC_Err_NVSRam "BDC Error NVSRam not available or wrong version";
+CM_ SG_ 18 BDC_Err_Flash "BDC Error flash CRC wrong";
+CM_ SG_ 18 BDC_Err_EEProm "BDC Error main parameter set failure";
+CM_ SG_ 18 BDC_Err_HW_FPGA_Ver "BDC Error HW or FPGA version not korrekt";
+CM_ SG_ 18 BDC_Err_CANTx "BDC Error too many CAN Tx failures";
+CM_ SG_ 18 BDC_Err_CANRx "BDC Error too many CAN Rx failures";
+CM_ SG_ 18 BDC_Err_CANOff "BDC Error CAN off at uC";
+CM_ SG_ 18 BDC_Err_OvltSky "BDC Error internal supply (15V) overvoltage";
+CM_ SG_ 18 BDC_Err_OvltLS "BDC Error low-side overvoltage";
+CM_ SG_ 18 BDC_Err_OvltHS "BDC Error high-side overvoltage";
+CM_ SG_ 18 BDC_War_TempIndD "BDC Warning temperatur sensor inductor D defective";
+CM_ SG_ 18 BDC_War_TempIndC "BDC Warning temperatur sensor inductor C defective";
+CM_ SG_ 18 BDC_War_TempIndB "BDC Warning temperatur sensor inductor B defective";
+CM_ SG_ 18 BDC_War_TempIndA "BDC Warning temperatur sensor inductor A defective";
+CM_ SG_ 18 BDC_War_Reset "BDC Warning System was reset";
+CM_ SG_ 18 BDC_War_IMax "BDC Warning Derating active";
+CM_ SG_ 18 BDC_War_Watchdog "BDC Warning Watchdog had caused the last reset";
+CM_ SG_ 18 BDC_War_TempL2x "BDC Warning temperatur sensor module L2x defective";
+CM_ SG_ 18 BDC_War_TempL1y "BDC Warning temperatur sensor module L1y defective";
+CM_ SG_ 18 BDC_War_TempL1x "BDC Warning temperatur sensor module L1x defective";
+CM_ SG_ 18 BDC_Err_FPGA_NVM "BDC Error FPGA NVM CRC check";
+CM_ SG_ 18 BDC_War_TempL4y "BDC Warning temperatur sensor module L4y defective";
+CM_ SG_ 18 BDC_War_TempL4x "BDC Warning temperatur sensor module L4x defective";
+CM_ SG_ 18 BDC_War_TempL3y "BDC Warning temperatur sensor module L3y defective";
+CM_ SG_ 18 BDC_War_TempL3x "BDC Warning temperatur sensor module L3x defective";
+CM_ SG_ 18 BDC_War_TempL2y "BDC Warning temperatur sensor module L2y defective";
+CM_ SG_ 18 BDC_War_HSOvervoltage "BDC Warning FPGA has switched off with HS Overvoltage";
+CM_ SG_ 18 BDC_War_NoIntSupply "BDC Warning no internal supply (15V)";
+CM_ SG_ 18 BDC_War_NoHV_UHS "BDC Warning no HV at high-side";
+CM_ SG_ 18 BDC_War_WrongFPGA "BDC Warning wrong FPGA version";
+CM_ SG_ 18 BDC_War_WrongHW "BDC Warning wrong HW versions";
+CM_ SG_ 18 BDC_War_PyroVCneg "BDC Warning Pyrofuse negative resistance wrong";
+CM_ SG_ 18 BDC_War_PyroVCpos "BDC Warning Pyrofuse positive resistance wrong";
+CM_ SG_ 18 BDC_War_Discharge "BDC Warning Voltage too high after discharge";
+CM_ SG_ 18 BDC_War_CAN_Timeout "BDC Warning CAN Timeout was detected";
+CM_ SG_ 18 BDC_War_LSOvervoltage "BDC Warning FPGA has switched off with LS Overvoltage";
+CM_ BO_ 19 "Msg 3 from BDC546 to SG (Errors and Warnings) 200ms";
+CM_ SG_ 19 DCDC_SG_IL_max "Minimum inductor current measured";
 CM_ SG_ 577 FC_State_Callowed "Current Draw Allowed";
 CM_ SG_ 577 FC_State_Cstack "Fuel Cell Current";
 CM_ SG_ 577 FC_State_Vstack "Fuel Cell";
@@ -364,9 +557,15 @@ Slot number: 1
 Node number: 1";
 
 BA_DEF_ BO_ "GenMsgCycleTimeus" INT 100 60000000;
+BA_DEF_ SG_ "SystemSignalLongSymbol" STRING ;
 
 BA_DEF_DEF_  "GenMsgCycleTimeus" 100000;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 
+BA_ "GenMsgCycleTimeus" BO_ 16 10000;
+BA_ "GenMsgCycleTimeus" BO_ 17 200000;
+BA_ "GenMsgCycleTimeus" BO_ 18 200000;
+BA_ "GenMsgCycleTimeus" BO_ 19 200000;
 BA_ "GenMsgCycleTimeus" BO_ 200 100000;
 BA_ "GenMsgCycleTimeus" BO_ 201 100000;
 BA_ "GenMsgCycleTimeus" BO_ 202 100000;
@@ -399,3 +598,19 @@ BA_ "GenMsgCycleTimeus" BO_ 1403 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1405 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000001 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000002 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000003 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000004 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000005 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000006 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000007 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000008 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000009 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000010 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000011 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000012 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000013 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000014 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
+BA_ "SystemSignalLongSymbol" SG_ 705 逝ｪ逝ｪ"s逝ｪ逝ｪ"s神000015 "逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ"s逝ｪ逝ｪ";
