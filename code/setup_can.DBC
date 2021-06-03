@@ -157,9 +157,9 @@ BO_ 200 WC_Error: 2 Sender__XXX
  SG_ WC_v24temp_extreme_high : 14|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 201 WC_Flow: 6 Sender__XXX
- SG_ WC_Flow_batteryLoop : 7|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_PortOloop : 23|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
- SG_ WC_Flow_StarLoop : 39|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_batteryLoop : 0|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_PortOloop : 16|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ WC_Flow_StarLoop : 32|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 202 WC_FlowTemp: 6 Sender__XXX
  SG_ WC_FlowTemp_BatteryLoop : 0|16@1+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
@@ -215,6 +215,7 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMSFE_NumbCellsLow : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_isolation : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_LastFatalError : 60|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_high : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -246,15 +247,14 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMS_cellTemp_high : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_low : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_LastHarbourError : 56|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] "0"  imc_BUSFX_2_133754
- SG_ EMS_LastFatalError : 60|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
 
 BO_ 301 EMS_FlowTemp: 4 Sender__XXX
  SG_ EMS_FlowTemp_motorLoop : 7|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
  SG_ EMS_FlowTemp_dcdc : 23|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 302 EMS_flow: 6 Sender__XXX
- SG_ EMS_flow_dcdc : 7|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
- SG_ EMS_flow_motorLoop : 23|16@0+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ EMS_flow_dcdc : 0|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
+ SG_ EMS_flow_motorLoop : 16|16@1+ (7.629510948E-4,0.000000000E+0) [0.000000000E+0|5.000000000E+1] "L/min"  imc_BUSFX_2_133754
 
 BO_ 303 EMS_OthADC: 8 Sender__XXX
  SG_ EMS_OthADC_TankTemp : 7|16@0- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
@@ -263,13 +263,6 @@ BO_ 303 EMS_OthADC: 8 Sender__XXX
 BO_ 304 EMS_isometer: 2 Sender__XXX
  SG_ EMS_isometer_freq : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] "Hz"  imc_BUSFX_2_133754
  SG_ EMS_isometer_DutyCycle : 8|8@1+ (3.921568627E-3,0.000000000E+0) [0.000000000E+0|9.999999999E-1] "%"  imc_BUSFX_2_133754
-
-BO_ 305 EMS_status: 8 Sender__XXX
- SG_ motorisstarted : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
-
-BO_ 306 EMS_Sended_rpm: 3 Sender__XXX
- SG_ drive_reverse : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_Sended_rpm : 15|16@0- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] "rpm"  imc_BUSFX_2_133754
 
 BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_OFF : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -417,6 +410,23 @@ BO_ 1408 BMS_CellTemp: 8 Sender__XXX
 
 BO_ 1600 HydrogenSensor: 8 Sender__XXX
  SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
+
+BO_ 701 MC_speed: 3 Sender__XXX
+ SG_ MC_speed : 8|16@1- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] ""  imc_BUSFX_2_133754
+
+BO_ 305 EMS_Status_Message: 8 Sender__XXX
+ SG_ EMS_Config_Tank : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ motorisstarted : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+
+BO_ 306 EMS_send_rpm: 3 Sender__XXX
+ SG_ EMS_send_rpm : 8|16@1- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] ""  imc_BUSFX_2_133754
+ SG_ EMS_send_drivereverse : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+
+BO_ 700 MC_temperature: 8 Sender__XXX
+ SG_ MC_temperature : 8|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "C"  imc_BUSFX_2_133754
+
+BO_ 702 MC_Power: 8 Sender__XXX
+ SG_ MC_Power : 8|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "W"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ BO_ 16 "Msg 1 from BDC546 to SG (main message) 10ms";
@@ -587,8 +597,6 @@ BA_ "GenMsgCycleTimeus" BO_ 301 100000;
 BA_ "GenMsgCycleTimeus" BO_ 302 100000;
 BA_ "GenMsgCycleTimeus" BO_ 303 100000;
 BA_ "GenMsgCycleTimeus" BO_ 304 100000;
-BA_ "GenMsgCycleTimeus" BO_ 305 100000;
-BA_ "GenMsgCycleTimeus" BO_ 306 100000;
 BA_ "GenMsgCycleTimeus" BO_ 500 100000;
 BA_ "GenMsgCycleTimeus" BO_ 577 200000;
 BA_ "GenMsgCycleTimeus" BO_ 705 100000;
@@ -608,19 +616,40 @@ BA_ "GenMsgCycleTimeus" BO_ 1403 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1405 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has occurr "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000016 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000017 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000018 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000019 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000020 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000021 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000022 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000023 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000024 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000025 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000026 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000027 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000028 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000029 "et Indicates clipping has occurred. Values: 0 false 1 true ";
-BA_ "SystemSignalLongSymbol" SG_ 705 et Indicates clipping has_000030 "et Indicates clipping has occurred. Values: 0 false 1 true ";
+BA_ "GenMsgCycleTimeus" BO_ 701 100000;
+BA_ "GenMsgCycleTimeus" BO_ 305 100000;
+BA_ "GenMsgCycleTimeus" BO_ 306 100000;
+BA_ "GenMsgCycleTimeus" BO_ 700 100000;
+BA_ "GenMsgCycleTimeus" BO_ 702 100000;
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_on_the "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000016 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000017 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000018 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000019 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000020 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000021 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000022 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000023 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000024 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000025 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000026 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000027 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000028 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000029 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000030 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal_clock_i "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000031 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000032 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000033 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000034 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000035 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000036 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000037 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000038 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000039 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000040 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000041 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000042 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000043 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000044 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000045 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
