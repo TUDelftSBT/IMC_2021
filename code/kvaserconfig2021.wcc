@@ -31,8 +31,8 @@
     </DIR>
     <DIR Name="Desktop">
       <INT Name="PixelsPerInch">96</INT>
-      <INT Name="Left">414</INT>
-      <INT Name="Top">14</INT>
+      <INT Name="Left">349</INT>
+      <INT Name="Top">15</INT>
       <INT Name="Width">663</INT>
       <INT Name="Height">101</INT>
       <INT Name="State">0</INT>
@@ -53,7 +53,7 @@
         <INT Name="Width">340</INT>
         <INT Name="Height">650</INT>
         <INT Name="State">0</INT>
-        <INT Name="Visible">1</INT>
+        <INT Name="Visible">0</INT>
         <STR Name="Caption">CAN 1</STR>
         <INT Name="PixelsPerInch">96</INT>
         <INT Name="BitR">500000</INT>
@@ -68,8 +68,8 @@
       </DIR>
       <DIR Name="1">
         <STR Name="Class">TFormatter</STR>
-        <INT Name="Left">571</INT>
-        <INT Name="Top">266</INT>
+        <INT Name="Left">341</INT>
+        <INT Name="Top">210</INT>
         <INT Name="Width">319</INT>
         <INT Name="Height">316</INT>
         <INT Name="State">0</INT>
@@ -100,16 +100,16 @@
       </DIR>
       <DIR Name="2">
         <STR Name="Class">TOutputWindow</STR>
-        <INT Name="Left">-8</INT>
-        <INT Name="Top">-8</INT>
-        <INT Name="Width">1113</INT>
-        <INT Name="Height">662</INT>
-        <INT Name="State">2</INT>
+        <INT Name="Left">542</INT>
+        <INT Name="Top">0</INT>
+        <INT Name="Width">561</INT>
+        <INT Name="Height">653</INT>
+        <INT Name="State">0</INT>
         <INT Name="Visible">0</INT>
         <STR Name="Caption">Output Window</STR>
         <INT Name="PixelsPerInch">96</INT>
         <INT Name="AutoScroll">1</INT>
-        <INT Name="FixedPos">0</INT>
+        <INT Name="FixedPos">1</INT>
       </DIR>
       <DIR Name="3">
         <STR Name="Class">THistoryWindow</STR>
@@ -166,7 +166,23 @@
         <STR Name="FileName"></STR>
         <INT Name="AutoStart">1</INT>
       </DIR>
-      <STR Name="ReverseZOrder">1,0</STR>
+      <DIR Name="8">
+        <STR Name="Class">TCANKingDialog.TUtilPage.TUniversalMessage</STR>
+        <INT Name="Left">355</INT>
+        <INT Name="Top">66</INT>
+        <INT Name="State">0</INT>
+        <INT Name="Visible">0</INT>
+        <STR Name="Caption">CAN Message 1</STR>
+        <INT Name="PixelsPerInch">96</INT>
+        <INT Name="MsgLen">104</INT>
+        <BINARY Name="Msg">
+          AAAAABQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAA=
+        </BINARY>
+        <INT Name="Channel">0</INT>
+      </DIR>
+      <STR Name="ReverseZOrder">1</STR>
     </DIR>
     <DIR Name="Connections">
       <STR Name="C0">0,1,0,0</STR>
@@ -177,6 +193,8 @@
       <STR Name="C5">1,5,0,0</STR>
       <STR Name="C6">1,5,1,1</STR>
       <STR Name="C7">7,4,0,0</STR>
+      <STR Name="C8">8,0,0,0</STR>
+      <STR Name="C9">8,3,0,0</STR>
     </DIR>
   </DIR>
   <DIR Name="CKMenu">
