@@ -216,6 +216,7 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMSHE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_isolation : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_LastFatalError : 60|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ EMSFE_EmerLoop : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_high : 39|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -229,7 +230,7 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMS_tempMotorLoop_high : 47|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_FATAL_ERROR : 48|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_TankTemp_high : 49|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ skip_deze : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_HARBOUR_ERROR : 50|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_cellT_extrHigh : 23|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_TbattLoop_extrHigh : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_TportOloop_extrHigh : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -378,7 +379,7 @@ BO_ 833 FC_Temp: 8 Sender__XXX
  SG_ FC_Temp_CoolantSetPoint : 16|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "C"  imc_BUSFX_2_133754
 
 BO_ 1313 Shunt_Current: 6 Sender__XXX
- SG_ Shunt_Current_msg : 16|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] "mA"  imc_BUSFX_2_133754
+ SG_ Shunt_Current_msg : 16|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "mA"  imc_BUSFX_2_133754
 
 BO_ 1400 BMS_Overall: 8 Sender__XXX
  SG_ BMS_Overall_NumbOfCellsMSB : 16|8@1+ (2.560000000E+2,0.000000000E+0) [0.000000000E+0|6.528000000E+4] ""  imc_BUSFX_2_133754
@@ -408,11 +409,14 @@ BO_ 1408 BMS_CellTemp: 8 Sender__XXX
  SG_ BMS_CellTemp_Max : 8|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
  SG_ BMS_CellTemp_Avg : 16|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
 
-BO_ 1600 HydrogenSensor: 8 Sender__XXX
- SG_ HydrogenSensor_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
+BO_ 1600 HydrogenSensor1: 8 Sender__XXX
+ SG_ HydrogenSensor1_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
 
-BO_ 701 MC_speed: 3 Sender__XXX
- SG_ MC_speed : 8|16@1- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] ""  imc_BUSFX_2_133754
+BO_ 1608 HydrogenSensor2: 8 Sender__XXX
+ SG_ HydrogenSensor2_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
+
+BO_ 701 MC_rpm: 3 Sender__XXX
+ SG_ MC_rpm : 8|16@1- (-1.220740379E-1,0.000000000E+0) [4.000122074E+3|-4.000000000E+3] "rpm"  imc_BUSFX_2_133754
 
 BO_ 305 EMS_Status_Message: 8 Sender__XXX
  SG_ EMS_Config_Tank : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -616,40 +620,25 @@ BA_ "GenMsgCycleTimeus" BO_ 1403 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1405 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
+BA_ "GenMsgCycleTimeus" BO_ 1608 100000;
 BA_ "GenMsgCycleTimeus" BO_ 701 100000;
 BA_ "GenMsgCycleTimeus" BO_ 305 100000;
 BA_ "GenMsgCycleTimeus" BO_ 306 100000;
 BA_ "GenMsgCycleTimeus" BO_ 700 100000;
 BA_ "GenMsgCycleTimeus" BO_ 702 100000;
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_on_the "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000016 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000017 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000018 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000019 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000020 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000021 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000022 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000023 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000024 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000025 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000026 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000027 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000028 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000029 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 705 tes_if_there_was_clipping_000030 "tes_if_there_was_clipping_on_the_Z_axis_of_the_magnetometer__Values__0_false_1_true_";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal_clock_i "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000031 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000032 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000033 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000034 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000035 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000036 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000037 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000038 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000039 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000040 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000041 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000042 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000043 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000044 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
-BA_ "SystemSignalLongSymbol" SG_ 801 tes_whether_the_internal__000045 "tes_whether_the_internal_clock_is_synced_with_an_external_clock__Either_GNNS_or_custom_provided_clock_sync___Values__0_false_1_t";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during startup or w "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000016 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000017 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000018 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000019 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000020 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000021 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000022 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000023 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000024 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000025 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000026 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000027 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000028 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000029 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
+BA_ "SystemSignalLongSymbol" SG_ 801 y be invalid during start_000030 "y be invalid during startup or when the Xsens_Sensor data is clipping during violent (for the device) motion. Values: 0 false 1 ";
