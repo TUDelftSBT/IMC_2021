@@ -23,7 +23,7 @@ NS_ :
 
 BS_:
 
-BU_: BDC546 imc_BUSFX_2_133754 Sender__XXX WC Xsens_Sensor
+BU_: BDC546 imc_BUSFX_2_133754 Sender__XXX WC HC0 HC1 HC2 HC3 Xsens_Sensor
 
 
 BO_ 16 DCDC_1: 8 BDC546
@@ -215,7 +215,6 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMSFE_NumbCellsLow : 20|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSHE_motorT_extrHigh : 21|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_isolation : 22|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ EMS_LastFatalError : 60|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_EmerLoop : 12|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_MotorCont_nc : 13|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMSFE_BMSmaster_nc : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -248,6 +247,7 @@ BO_ 300 EMS_Error: 8 Sender__XXX
  SG_ EMS_cellTemp_high : 37|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_cellVoltage_low : 38|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
  SG_ EMS_LastHarbourError : 56|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] "0"  imc_BUSFX_2_133754
+ SG_ EMS_LastFatalError : 60|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
 
 BO_ 301 EMS_FlowTemp: 4 Sender__XXX
  SG_ EMS_FlowTemp_motorLoop : 7|16@0+ (2.288853285E-3,0.000000000E+0) [0.000000000E+0|1.500000000E+2] "C"  imc_BUSFX_2_133754
@@ -267,11 +267,11 @@ BO_ 304 EMS_isometer: 2 Sender__XXX
 
 BO_ 305 EMS_Status_Message: 8 Sender__XXX
  SG_ EMS_Config_Tank : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
- SG_ motorisstarted : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ EMS_Status_MotorStarted : 15|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
 
 BO_ 306 EMS_send_rpm: 3 Sender__XXX
- SG_ EMS_send_rpm : 8|16@1- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] ""  imc_BUSFX_2_133754
  SG_ EMS_send_drivereverse : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ EMS_send_rpm : 8|16@1- (1.220740379E-1,0.000000000E+0) [-4.000122074E+3|4.000000000E+3] ""  imc_BUSFX_2_133754
 
 BO_ 500 Dashboard_button: 2 Sender__XXX
  SG_ Dashboard_button_OFF : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -292,6 +292,234 @@ BO_ 577 FC_State: 8 Sender__XXX
  SG_ FC_State_Callowed : 16|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Cstack : 32|16@1- (1.000000000E-1,0.000000000E+0) [-3.276800000E+3|3.276700000E+3] "A"  imc_BUSFX_2_133754
  SG_ FC_State_Vstack : 48|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "V"  imc_BUSFX_2_133754
+
+BO_ 640 HC0_command: 8 Sender__XXX
+ SG_ hc0_command_type : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc0_node_id : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_length : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_id : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_value : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 641 HC0_command_response: 8 HC0
+ SG_ hc0_command_type_response : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc0_node_id_response : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_length_response : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_id_response : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_setting_value_response : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 642 HC0_State: 8 HC0
+ SG_ hc0_error : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_warning : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_senix_error : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_settings_error : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_error : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_warning : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_home_fault : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_homed : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_normal : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc0_control_mode : 6|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc0_code_version : 8|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_error_code : 32|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_maxon_last_error_code : 48|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+
+BO_ 643 HC0_height: 8 HC0
+ SG_ hc0_raw_height : 0|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc0_mean5_height : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc0_weighted_mean_height : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc0_median_5_height : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+
+BO_ 644 HC0_maxon_alpha: 8 HC0
+ SG_ hc0_maxon_target_angle : 0|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc0_maxon_actual_angle : 16|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc0_maxon_current : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mA"  imc_BUSFX_2_133754
+ SG_ hc0_maxon_rpm : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "rpm"  imc_BUSFX_2_133754
+
+BO_ 645 HC0_maxon_position: 8 HC0
+ SG_ hc0_maxon_target_position : 0|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+ SG_ hc0_maxon_actual_position : 32|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+
+BO_ 647 HC0_P_gains: 8 HC0
+ SG_ hc0_P_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_P_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 648 HC0_I_gains: 8 HC0
+ SG_ hc0_I_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_I_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 649 HC0_D_gains: 8 HC0
+ SG_ hc0_D_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc0_D_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 650 HC1_command: 8 Sender__XXX
+ SG_ hc1_command_type : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc1_node_id : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_length : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_id : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_value : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 651 HC1_command_response: 8 HC1
+ SG_ hc1_command_type_response : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc1_node_id_response : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_length_response : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_id_response : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_setting_value_response : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 652 HC1_State: 8 HC1
+ SG_ hc1_error : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_warning : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_senix_error : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_settings_error : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_error : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_warning : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_home_fault : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_homed : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_normal : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc1_control_mode : 6|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc1_code_version : 8|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_error_code : 32|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_maxon_last_error_code : 48|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+
+BO_ 653 HC1_height: 8 HC1
+ SG_ hc1_raw_height : 0|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc1_mean5_height : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc1_weighted_mean_height : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc1_median_5_height : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+
+BO_ 654 HC1_maxon_alpha: 8 HC1
+ SG_ hc1_maxon_target_angle : 0|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc1_maxon_actual_angle : 16|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc1_maxon_current : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mA"  imc_BUSFX_2_133754
+ SG_ hc1_maxon_rpm : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "rpm"  imc_BUSFX_2_133754
+
+BO_ 655 HC1_maxon_position: 8 HC1
+ SG_ hc1_maxon_target_position : 0|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+ SG_ hc1_maxon_actual_position : 32|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+
+BO_ 657 HC1_P_gains: 8 HC1
+ SG_ hc1_P_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_P_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 658 HC1_I_gains: 8 HC1
+ SG_ hc1_I_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_I_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 659 HC1_D_gains: 8 HC1
+ SG_ hc1_D_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc1_D_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 660 HC2_command: 8 Sender__XXX
+ SG_ hc2_command_type : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc2_node_id : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_length : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_id : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_value : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 661 HC2_command_response: 8 HC2
+ SG_ hc2_command_type_response : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc2_node_id_response : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_length_response : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_id_response : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_setting_value_response : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 662 HC2_State: 8 HC2
+ SG_ hc2_error : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_warning : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_senix_error : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_settings_error : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_error : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_warning : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_home_fault : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_homed : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_normal : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc2_control_mode : 6|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc2_code_version : 8|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_error_code : 32|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_maxon_last_error_code : 48|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+
+BO_ 663 HC2_height: 8 HC2
+ SG_ hc2_raw_height : 0|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc2_mean5_height : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc2_weighted_mean_height : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc2_median_5_height : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+
+BO_ 664 HC2_maxon_alpha: 8 HC2
+ SG_ hc2_maxon_target_angle : 0|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc2_maxon_actual_angle : 16|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc2_maxon_current : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mA"  imc_BUSFX_2_133754
+ SG_ hc2_maxon_rpm : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "rpm"  imc_BUSFX_2_133754
+
+BO_ 665 HC2_maxon_position: 8 HC2
+ SG_ hc2_maxon_target_position : 0|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+ SG_ hc2_maxon_actual_position : 32|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+
+BO_ 667 HC2_P_gains: 8 HC2
+ SG_ hc2_P_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_P_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 668 HC2_I_gains: 8 HC2
+ SG_ hc2_I_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_I_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 669 HC2_D_gains: 8 HC2
+ SG_ hc2_D_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc2_D_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 670 HC3_command: 8 Sender__XXX
+ SG_ hc3_command_type : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc3_node_id : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_length : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_id : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_value : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 671 HC3_command_response: 8 HC3
+ SG_ hc3_command_type_response : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc3_node_id_response : 8|4@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|1.500000000E+1] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_length_response : 12|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_id_response : 16|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_setting_value_response : 32|32@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|4.294967295E+9] ""  imc_BUSFX_2_133754
+
+BO_ 672 HC3_State: 8 HC3
+ SG_ hc3_error : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_warning : 1|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_senix_error : 2|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_settings_error : 3|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_error : 16|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_warning : 17|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_home_fault : 18|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_homed : 24|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_normal : 25|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
+ SG_ hc3_control_mode : 6|2@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|3.000000000E+0] ""  imc_BUSFX_2_133754
+ SG_ hc3_code_version : 8|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_error_code : 32|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_maxon_last_error_code : 48|16@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|6.553500000E+4] ""  imc_BUSFX_2_133754
+
+BO_ 673 HC3_height: 8 HC3
+ SG_ hc3_raw_height : 0|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc3_mean5_height : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc3_weighted_mean_height : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+ SG_ hc3_median_5_height : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mm"  imc_BUSFX_2_133754
+
+BO_ 674 HC3_maxon_alpha: 8 HC3
+ SG_ hc3_maxon_target_angle : 0|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc3_maxon_actual_angle : 16|16@1- (6.103701900E-4,0.000000000E+0) [-2.000061039E+1|2.000000002E+1] "deg"  imc_BUSFX_2_133754
+ SG_ hc3_maxon_current : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "mA"  imc_BUSFX_2_133754
+ SG_ hc3_maxon_rpm : 48|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "rpm"  imc_BUSFX_2_133754
+
+BO_ 675 HC3_maxon_position: 8 HC3
+ SG_ hc3_maxon_target_position : 0|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+ SG_ hc3_maxon_actual_position : 32|32@1- (1.000000000E+0,0.000000000E+0) [-2.147483648E+9|2.147483647E+9] "inc"  imc_BUSFX_2_133754
+
+BO_ 677 HC3_P_gains: 8 HC3
+ SG_ hc3_P_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_P_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 678 HC3_I_gains: 8 HC3
+ SG_ hc3_I_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_I_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+
+BO_ 679 HC3_D_gains: 8 HC3
+ SG_ hc3_D_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
+ SG_ hc3_D_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
 
 BO_ 700 MC_temperature: 8 Sender__XXX
  SG_ MC_temperature : 8|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "C"  imc_BUSFX_2_133754
@@ -427,10 +655,10 @@ BO_ 1408 BMS_CellTemp: 8 Sender__XXX
  SG_ BMS_CellTemp_Avg : 16|8@1+ (1.000000000E+0,-1.000000000E+2) [-1.000000000E+2|1.550000000E+2] "C"  imc_BUSFX_2_133754
 
 BO_ 1600 HydrogenSensor1: 8 Sender__XXX
- SG_ HydrogenSensor1_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
+ SG_ HydrogenSensor1_HydrogenLevel : 0|8@1+ (2.000000000E-2,-4.000000000E-1) [-4.000000000E-1|4.700000000E+0] "%"  imc_BUSFX_2_133754
 
 BO_ 1608 HydrogenSensor2: 8 Sender__XXX
- SG_ HydrogenSensor2_HydrogenLevel : 0|8@1- (2.000000000E-2,-4.000000000E-1) [-2.960000000E+0|2.140000000E+0] "%"  imc_BUSFX_2_133754
+ SG_ HydrogenSensor2_HydrogenLevel : 0|8@1+ (2.000000000E-2,-4.000000000E-1) [-4.000000000E-1|4.700000000E+0] "%"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ BO_ 16 "Msg 1 from BDC546 to SG (main message) 10ms";
@@ -516,8 +744,184 @@ CM_ SG_ 19 DCDC_SG_IL_max "Minimum inductor current measured";
 CM_ SG_ 577 FC_State_Callowed "Current Draw Allowed";
 CM_ SG_ 577 FC_State_Cstack "Fuel Cell Current";
 CM_ SG_ 577 FC_State_Vstack "Fuel Cell";
+CM_ BO_ 640 "pass command to hc node";
+CM_ SG_ 640 hc0_command_type "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 640 hc0_node_id "node id to change it in.";
+CM_ SG_ 640 hc0_setting_length "length ot the message command stuff";
+CM_ SG_ 640 hc0_setting_id "settings id to change";
+CM_ SG_ 640 hc0_setting_value "new value of the setting if it is set";
+CM_ BO_ 641 "pass command to hc node";
+CM_ SG_ 641 hc0_command_type_response "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 641 hc0_node_id_response "node id to change it in.";
+CM_ SG_ 641 hc0_setting_length_response "length ot the message command stuff";
+CM_ SG_ 641 hc0_setting_id_response "settings id to change that was specified";
+CM_ SG_ 641 hc0_setting_value_response "current value of the setting";
+CM_ BO_ 642 "the state of the HC node with errors and problems ";
+CM_ SG_ 642 hc0_error "There was an error with HC";
+CM_ SG_ 642 hc0_warning "non fatal problem with ";
+CM_ SG_ 642 hc0_senix_error "error with the senix";
+CM_ SG_ 642 hc0_settings_error "There was a problem loading settings, some may have been reset";
+CM_ SG_ 642 hc0_maxon_error "error with the maxon";
+CM_ SG_ 642 hc0_maxon_warning "warning with the maxon";
+CM_ SG_ 642 hc0_maxon_home_fault "fault during homing";
+CM_ SG_ 642 hc0_maxon_homed "homed succesfully";
+CM_ SG_ 642 hc0_maxon_normal "operating normally";
+CM_ SG_ 642 hc0_control_mode "current mode of height control";
+CM_ SG_ 642 hc0_code_version "current version of the HC code";
+CM_ SG_ 642 hc0_maxon_error_code "current error code of the maxon";
+CM_ SG_ 642 hc0_maxon_last_error_code "last error code if it is already cleared";
+CM_ BO_ 643 "the height and filtered height of the attached sensor";
+CM_ BO_ 644 "maxon position data and other things";
+CM_ SG_ 644 hc0_maxon_target_angle "target angle";
+CM_ SG_ 644 hc0_maxon_actual_angle "current angle";
+CM_ SG_ 644 hc0_maxon_current "current draw";
+CM_ SG_ 644 hc0_maxon_rpm "current velocity";
+CM_ BO_ 645 "maxon position data and other things";
+CM_ SG_ 645 hc0_maxon_target_position "target position";
+CM_ SG_ 645 hc0_maxon_actual_position "current position";
+CM_ BO_ 647 "the set propotional gains";
+CM_ SG_ 647 hc0_P_height "poportional gain for the height";
+CM_ SG_ 647 hc0_P_roll "poportional gain for the roll";
+CM_ BO_ 648 "the set integral gains";
+CM_ SG_ 648 hc0_I_height "integral gain for the height";
+CM_ SG_ 648 hc0_I_roll "integral gain for the roll";
+CM_ BO_ 649 "the set derivative gains";
+CM_ SG_ 649 hc0_D_height "derivative gain for the height";
+CM_ SG_ 649 hc0_D_roll "derivative gain for the roll";
+CM_ BO_ 650 "pass command to hc node";
+CM_ SG_ 650 hc1_command_type "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 650 hc1_node_id "node id to change it in.";
+CM_ SG_ 650 hc1_setting_length "length ot the message command stuff";
+CM_ SG_ 650 hc1_setting_id "settings id to change";
+CM_ SG_ 650 hc1_setting_value "new value of the setting if it is set";
+CM_ BO_ 651 "pass command to hc node";
+CM_ SG_ 651 hc1_command_type_response "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 651 hc1_node_id_response "node id to change it in.";
+CM_ SG_ 651 hc1_setting_length_response "length ot the message command stuff";
+CM_ SG_ 651 hc1_setting_id_response "settings id to change that was specified";
+CM_ SG_ 651 hc1_setting_value_response "current value of the setting";
+CM_ BO_ 652 "the state of the HC node with errors and problems ";
+CM_ SG_ 652 hc1_error "There was an error with HC";
+CM_ SG_ 652 hc1_warning "non fatal problem with ";
+CM_ SG_ 652 hc1_senix_error "error with the senix";
+CM_ SG_ 652 hc1_settings_error "There was a problem loading settings, some may have been reset";
+CM_ SG_ 652 hc1_maxon_error "error with the maxon";
+CM_ SG_ 652 hc1_maxon_warning "warning with the maxon";
+CM_ SG_ 652 hc1_maxon_home_fault "fault during homing";
+CM_ SG_ 652 hc1_maxon_homed "homed succesfully";
+CM_ SG_ 652 hc1_maxon_normal "operating normally";
+CM_ SG_ 652 hc1_control_mode "current mode of height control";
+CM_ SG_ 652 hc1_code_version "current version of the HC code";
+CM_ SG_ 652 hc1_maxon_error_code "current error code of the maxon";
+CM_ SG_ 652 hc1_maxon_last_error_code "last error code if it is already cleared";
+CM_ BO_ 653 "the height and filtered height of the attached sensor";
+CM_ BO_ 654 "maxon position data and other things";
+CM_ SG_ 654 hc1_maxon_target_angle "target angle";
+CM_ SG_ 654 hc1_maxon_actual_angle "current angle";
+CM_ SG_ 654 hc1_maxon_current "current draw";
+CM_ SG_ 654 hc1_maxon_rpm "current velocity";
+CM_ BO_ 655 "maxon position data and other things";
+CM_ SG_ 655 hc1_maxon_target_position "target position";
+CM_ SG_ 655 hc1_maxon_actual_position "current position";
+CM_ BO_ 657 "the set propotional gains";
+CM_ SG_ 657 hc1_P_height "poportional gain for the height";
+CM_ SG_ 657 hc1_P_roll "poportional gain for the roll";
+CM_ BO_ 658 "the set integral gains";
+CM_ SG_ 658 hc1_I_height "integral gain for the height";
+CM_ SG_ 658 hc1_I_roll "integral gain for the roll";
+CM_ BO_ 659 "the set derivative gains";
+CM_ SG_ 659 hc1_D_height "derivative gain for the height";
+CM_ SG_ 659 hc1_D_roll "derivative gain for the roll";
+CM_ BO_ 660 "pass command to hc node";
+CM_ SG_ 660 hc2_command_type "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 660 hc2_node_id "node id to change it in.";
+CM_ SG_ 660 hc2_setting_length "length ot the message command stuff";
+CM_ SG_ 660 hc2_setting_id "settings id to change";
+CM_ SG_ 660 hc2_setting_value "new value of the setting if it is set";
+CM_ BO_ 661 "pass command to hc node";
+CM_ SG_ 661 hc2_command_type_response "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 661 hc2_node_id_response "node id to change it in.";
+CM_ SG_ 661 hc2_setting_length_response "length ot the message command stuff";
+CM_ SG_ 661 hc2_setting_id_response "settings id to change that was specified";
+CM_ SG_ 661 hc2_setting_value_response "current value of the setting";
+CM_ BO_ 662 "the state of the HC node with errors and problems ";
+CM_ SG_ 662 hc2_error "There was an error with HC";
+CM_ SG_ 662 hc2_warning "non fatal problem with ";
+CM_ SG_ 662 hc2_senix_error "error with the senix";
+CM_ SG_ 662 hc2_settings_error "There was a problem loading settings, some may have been reset";
+CM_ SG_ 662 hc2_maxon_error "error with the maxon";
+CM_ SG_ 662 hc2_maxon_warning "warning with the maxon";
+CM_ SG_ 662 hc2_maxon_home_fault "fault during homing";
+CM_ SG_ 662 hc2_maxon_homed "homed succesfully";
+CM_ SG_ 662 hc2_maxon_normal "operating normally";
+CM_ SG_ 662 hc2_control_mode "current mode of height control";
+CM_ SG_ 662 hc2_code_version "current version of the HC code";
+CM_ SG_ 662 hc2_maxon_error_code "current error code of the maxon";
+CM_ SG_ 662 hc2_maxon_last_error_code "last error code if it is already cleared";
+CM_ BO_ 663 "the height and filtered height of the attached sensor";
+CM_ BO_ 664 "maxon position data and other things";
+CM_ SG_ 664 hc2_maxon_target_angle "target angle";
+CM_ SG_ 664 hc2_maxon_actual_angle "current angle";
+CM_ SG_ 664 hc2_maxon_current "current draw";
+CM_ SG_ 664 hc2_maxon_rpm "current velocity";
+CM_ BO_ 665 "maxon position data and other things";
+CM_ SG_ 665 hc2_maxon_target_position "target position";
+CM_ SG_ 665 hc2_maxon_actual_position "current position";
+CM_ BO_ 667 "the set propotional gains";
+CM_ SG_ 667 hc2_P_height "poportional gain for the height";
+CM_ SG_ 667 hc2_P_roll "poportional gain for the roll";
+CM_ BO_ 668 "the set integral gains";
+CM_ SG_ 668 hc2_I_height "integral gain for the height";
+CM_ SG_ 668 hc2_I_roll "integral gain for the roll";
+CM_ BO_ 669 "the set derivative gains";
+CM_ SG_ 669 hc2_D_height "derivative gain for the height";
+CM_ SG_ 669 hc2_D_roll "derivative gain for the roll";
+CM_ BO_ 670 "pass command to hc node";
+CM_ SG_ 670 hc3_command_type "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 670 hc3_node_id "node id to change it in.";
+CM_ SG_ 670 hc3_setting_length "length ot the message command stuff";
+CM_ SG_ 670 hc3_setting_id "settings id to change";
+CM_ SG_ 670 hc3_setting_value "new value of the setting if it is set";
+CM_ BO_ 671 "pass command to hc node";
+CM_ SG_ 671 hc3_command_type_response "get or set a setting. 0x10 is get, 0x20 is set.";
+CM_ SG_ 671 hc3_node_id_response "node id to change it in.";
+CM_ SG_ 671 hc3_setting_length_response "length ot the message command stuff";
+CM_ SG_ 671 hc3_setting_id_response "settings id to change that was specified";
+CM_ SG_ 671 hc3_setting_value_response "current value of the setting";
+CM_ BO_ 672 "the state of the HC node with errors and problems ";
+CM_ SG_ 672 hc3_error "There was an error with HC";
+CM_ SG_ 672 hc3_warning "non fatal problem with ";
+CM_ SG_ 672 hc3_senix_error "error with the senix";
+CM_ SG_ 672 hc3_settings_error "There was a problem loading settings, some may have been reset";
+CM_ SG_ 672 hc3_maxon_error "error with the maxon";
+CM_ SG_ 672 hc3_maxon_warning "warning with the maxon";
+CM_ SG_ 672 hc3_maxon_home_fault "fault during homing";
+CM_ SG_ 672 hc3_maxon_homed "homed succesfully";
+CM_ SG_ 672 hc3_maxon_normal "operating normally";
+CM_ SG_ 672 hc3_control_mode "current mode of height control";
+CM_ SG_ 672 hc3_code_version "current version of the HC code";
+CM_ SG_ 672 hc3_maxon_error_code "current error code of the maxon";
+CM_ SG_ 672 hc3_maxon_last_error_code "last error code if it is already cleared";
+CM_ BO_ 673 "the height and filtered height of the attached sensor";
+CM_ BO_ 674 "maxon position data and other things";
+CM_ SG_ 674 hc3_maxon_target_angle "target angle";
+CM_ SG_ 674 hc3_maxon_actual_angle "current angle";
+CM_ SG_ 674 hc3_maxon_current "current draw";
+CM_ SG_ 674 hc3_maxon_rpm "current velocity";
+CM_ BO_ 675 "maxon position data and other things";
+CM_ SG_ 675 hc3_maxon_target_position "target position";
+CM_ SG_ 675 hc3_maxon_actual_position "current position";
+CM_ BO_ 677 "the set propotional gains";
+CM_ SG_ 677 hc3_P_height "poportional gain for the height";
+CM_ SG_ 677 hc3_P_roll "poportional gain for the roll";
+CM_ BO_ 678 "the set integral gains";
+CM_ SG_ 678 hc3_I_height "integral gain for the height";
+CM_ SG_ 678 hc3_I_roll "integral gain for the roll";
+CM_ BO_ 679 "the set derivative gains";
+CM_ SG_ 679 hc3_D_height "derivative gain for the height";
+CM_ SG_ 679 hc3_D_roll "derivative gain for the roll";
 CM_ SG_ 705 FC_Faults_UnderV "Stack Under Voltage Fault";
-CM_ SG_ 705 FC_Faults_OverTemo "Coolant OverTemperature Fault";
+CM_ SG_ 705 FC_Faults_OverTemo "Coolant Over-Temperature Fault";
 CM_ SG_ 705 FC_Faults_HearthBeat "Command Heart Beat Fault";
 CM_ SG_ 705 FC_Faults_Estop "Internal System Estop Fault";
 CM_ SG_ 705 FC_Faults_LeakCheck "Leak Check Failed Fault";
@@ -532,11 +936,11 @@ CM_ SG_ 705 FC_Alarms_H2_PSensRange "H2 Pressure Sensor Out of Range Alarm";
 CM_ SG_ 705 FC_Alarms_AirFlowRange "Air Flow Out of Range Alarm";
 CM_ SG_ 705 FC_Alarms_CsenseRange "Current Sensor Out of Range Alarm";
 CM_ SG_ 705 FC_Alarms_CoolTempHigh "Coolant Temperature High Alarm";
-CM_ SG_ 705 FC_Alarms_OverPower "System OverPower Alarm";
-CM_ SG_ 705 FC_Alarms_NonRun "Air Flow in a NonRun State Alarm";
+CM_ SG_ 705 FC_Alarms_OverPower "System Over-Power Alarm";
+CM_ SG_ 705 FC_Alarms_NonRun "Air Flow in a Non-Run State Alarm";
 CM_ SG_ 705 FC_Alarms_BlowFlow "Blower Low Flow Alarm";
-CM_ SG_ 705 FC_Alarms_AnPumpSpeed "Anode Pump OverUnder Speed Alarm";
-CM_ SG_ 705 FC_Alarms_CoolTemp "Coolant Temp Out of Range Alarm";
+CM_ SG_ 705 FC_Alarms_AnPumpSpeed "Anode Pump Over/Under Speed Alarm";
+CM_ SG_ 705 FC_Alarms_CoolTemp "Coolant Temp. Out of Range Alarm";
 CM_ SG_ 705 FC_Alarms_BlowVoltLow "Blower Low Voltage Alarm";
 CM_ SG_ 705 FC_Alarms_Recovery "Recovery Alarm";
 CM_ SG_ 705 FC_Alarms_CoolFlow "Coolant Low Flow Alarm";
@@ -603,6 +1007,42 @@ BA_ "GenMsgCycleTimeus" BO_ 305 100000;
 BA_ "GenMsgCycleTimeus" BO_ 306 100000;
 BA_ "GenMsgCycleTimeus" BO_ 500 100000;
 BA_ "GenMsgCycleTimeus" BO_ 577 200000;
+BA_ "GenMsgCycleTimeus" BO_ 640 100000;
+BA_ "GenMsgCycleTimeus" BO_ 641 100000;
+BA_ "GenMsgCycleTimeus" BO_ 642 100000;
+BA_ "GenMsgCycleTimeus" BO_ 643 100000;
+BA_ "GenMsgCycleTimeus" BO_ 644 100000;
+BA_ "GenMsgCycleTimeus" BO_ 645 100000;
+BA_ "GenMsgCycleTimeus" BO_ 647 100000;
+BA_ "GenMsgCycleTimeus" BO_ 648 100000;
+BA_ "GenMsgCycleTimeus" BO_ 649 100000;
+BA_ "GenMsgCycleTimeus" BO_ 650 100000;
+BA_ "GenMsgCycleTimeus" BO_ 651 100000;
+BA_ "GenMsgCycleTimeus" BO_ 652 100000;
+BA_ "GenMsgCycleTimeus" BO_ 653 100000;
+BA_ "GenMsgCycleTimeus" BO_ 654 100000;
+BA_ "GenMsgCycleTimeus" BO_ 655 100000;
+BA_ "GenMsgCycleTimeus" BO_ 657 100000;
+BA_ "GenMsgCycleTimeus" BO_ 658 100000;
+BA_ "GenMsgCycleTimeus" BO_ 659 100000;
+BA_ "GenMsgCycleTimeus" BO_ 660 100000;
+BA_ "GenMsgCycleTimeus" BO_ 661 100000;
+BA_ "GenMsgCycleTimeus" BO_ 662 100000;
+BA_ "GenMsgCycleTimeus" BO_ 663 100000;
+BA_ "GenMsgCycleTimeus" BO_ 664 100000;
+BA_ "GenMsgCycleTimeus" BO_ 665 100000;
+BA_ "GenMsgCycleTimeus" BO_ 667 100000;
+BA_ "GenMsgCycleTimeus" BO_ 668 100000;
+BA_ "GenMsgCycleTimeus" BO_ 669 100000;
+BA_ "GenMsgCycleTimeus" BO_ 670 100000;
+BA_ "GenMsgCycleTimeus" BO_ 671 100000;
+BA_ "GenMsgCycleTimeus" BO_ 672 100000;
+BA_ "GenMsgCycleTimeus" BO_ 673 100000;
+BA_ "GenMsgCycleTimeus" BO_ 674 100000;
+BA_ "GenMsgCycleTimeus" BO_ 675 100000;
+BA_ "GenMsgCycleTimeus" BO_ 677 100000;
+BA_ "GenMsgCycleTimeus" BO_ 678 100000;
+BA_ "GenMsgCycleTimeus" BO_ 679 100000;
 BA_ "GenMsgCycleTimeus" BO_ 700 100000;
 BA_ "GenMsgCycleTimeus" BO_ 701 100000;
 BA_ "GenMsgCycleTimeus" BO_ 702 100000;
