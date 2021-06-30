@@ -261,6 +261,7 @@ BO_ 303 EMS_OthADC: 8 Sender__XXX
  SG_ EMS_OthADC_TankTemp : 7|16@0- (2.288853280E-3,0.000000000E+0) [-7.500114428E+1|7.499885543E+1] "C"  imc_BUSFX_2_133754
  SG_ EMS_OthADC_H2Mass : 39|16@0+ (1.525902100E-4,0.000000000E+0) [0.000000000E+0|9.999999412E+0] "KG"  imc_BUSFX_2_133754
  SG_ EMS_OthADC_TankPress : 23|16@0+ (6.836041810E-3,0.000000000E+0) [0.000000000E+0|4.480000000E+2] "Bar"  imc_BUSFX_2_133754
+ SG_ EMS_OthADC_drawwire : 55|16@0- (1.525902000E-5,0.000000000E+0) [-5.000075674E-1|4.999923083E-1] "degree"  imc_BUSFX_2_133754
 
 BO_ 304 EMS_isometer: 2 Sender__XXX
  SG_ EMS_isometer_freq : 0|8@1+ (1.000000000E+0,0.000000000E+0) [0.000000000E+0|2.550000000E+2] "Hz"  imc_BUSFX_2_133754
@@ -522,14 +523,25 @@ BO_ 679 HC3_D_gains: 8 HC3
  SG_ hc3_D_height : 0|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
  SG_ hc3_D_roll : 32|32@1- (1.000000000E-5,0.000000000E+0) [-2.147483648E+4|2.147483647E+4] ""  imc_BUSFX_2_133754
 
+BO_ 465 FuellCell_CDR: 2 Sender__XXX
+ SG_ FC_CurrentDrawRequest : 0|16@1+ (1.000000000E-1,0.000000000E+0) [0.000000000E+0|6.553500000E+3] "A"  imc_BUSFX_2_133754
+
 BO_ 700 Motor_temperature: 8 Sender__XXX
  SG_ Motor_temperature : 0|16@1- (1.821428571E-2,-1.712142857E+2) [-7.680599999E+2|4.256132141E+2] "C"  imc_BUSFX_2_133754
- SG_ Motor_speed : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "rpm"  imc_BUSFX_2_133754
+ SG_ Motor_speed : 16|16@1- (2.500000000E-4,0.000000000E+0) [-8.192000000E+0|8.191750000E+0] "rpm"  imc_BUSFX_2_133754
  SG_ MC_temperature : 32|16@1- (1.821428571E-2,-1.712142857E+2) [-7.680599999E+2|4.256132141E+2] "C"  imc_BUSFX_2_133754
 
+BO_ 449 FuelCell_CMD: 1 Sender__XXX
+ SG_ FC_StateCommand : 0|8@1- (1.000000000E+0,0.000000000E+0) [-1.280000000E+2|1.270000000E+2] "V"  imc_BUSFX_2_133754
+
 BO_ 701 MC_Power: 8 Sender__XXX
+ SG_ MC_current_actual : 32|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "A"  imc_BUSFX_2_133754
  SG_ MC_Power : 0|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "W"  imc_BUSFX_2_133754
  SG_ MC_I_red : 16|16@1- (1.000000000E+0,0.000000000E+0) [-3.276800000E+4|3.276700000E+4] "A"  imc_BUSFX_2_133754
+
+BO_ 809 Xsens_longlat: 4 Sender__XXX
+ SG_ Xsens_longitude : 23|16@0- (7.812499990E-3,0.000000000E+0) [-2.559999997E+2|2.559921872E+2] "degree"  imc_BUSFX_2_133754
+ SG_ Xsens_latitude : 7|16@0- (3.906249990E-3,0.000000000E+0) [-1.279999997E+2|1.279960934E+2] "degree"  imc_BUSFX_2_133754
 
 BO_ 705 FC_FaultsAlarms: 8 Sender__XXX
  SG_ FC_Faults_UnderV : 0|1@1+ (1,0) [0|1] ""  imc_BUSFX_2_133754
@@ -660,6 +672,9 @@ BO_ 1600 HydrogenSensor1: 8 Sender__XXX
 
 BO_ 1608 HydrogenSensor2: 8 Sender__XXX
  SG_ HydrogenSensor2_HydrogenLevel : 0|8@1+ (2.000000000E-2,-4.000000000E-1) [-4.000000000E-1|4.700000000E+0] "%"  imc_BUSFX_2_133754
+
+BO_ 1 DCDC_current: 3 Sender__XXX
+ SG_ DCDC_current_command : 7|16@0+ (3.125000000E-2,-1.024000000E+3) [-1.024000000E+3|1.023968750E+3] "A"  imc_BUSFX_2_133754
 
 CM_ "CAN-database created with: imc DEVICES 2.13 Rev. 11";
 CM_ BO_ 16 "Msg 1 from BDC546 to SG (main message) 10ms";
@@ -921,6 +936,7 @@ CM_ SG_ 678 hc3_I_roll "integral gain for the roll";
 CM_ BO_ 679 "the set derivative gains";
 CM_ SG_ 679 hc3_D_height "derivative gain for the height";
 CM_ SG_ 679 hc3_D_roll "derivative gain for the roll";
+CM_ BO_ 809 "Longitude and latitude coordinates of the boat";
 CM_ SG_ 705 FC_Faults_UnderV "Stack Under Voltage Fault";
 CM_ SG_ 705 FC_Faults_OverTemo "Coolant Over-Temperature Fault";
 CM_ SG_ 705 FC_Faults_HearthBeat "Command Heart Beat Fault";
@@ -979,6 +995,7 @@ CM_ SG_ 1401 BMS_Voltage_TotalVbyte2 "Add all bytes to get total";
 CM_ SG_ 1401 BMS_Voltage_TotalVbyte3 "Add all bytes to get total";
 CM_ SG_ 1401 BMS_Voltage_TotalVbyte0 "Add all bytes to get total";
 CM_ SG_ 1401 BMS_Voltage_TotalVbyte1 "Add all bytes to get total";
+CM_ BO_ 1 "current command to the DCDC";
 CM_ BU_ imc_BUSFX_2_133754 "Serial number: 133754
 Slot number: 1
 Node number: 1";
@@ -1044,8 +1061,11 @@ BA_ "GenMsgCycleTimeus" BO_ 675 100000;
 BA_ "GenMsgCycleTimeus" BO_ 677 100000;
 BA_ "GenMsgCycleTimeus" BO_ 678 100000;
 BA_ "GenMsgCycleTimeus" BO_ 679 100000;
+BA_ "GenMsgCycleTimeus" BO_ 465 100000;
 BA_ "GenMsgCycleTimeus" BO_ 700 100000;
+BA_ "GenMsgCycleTimeus" BO_ 449 100000;
 BA_ "GenMsgCycleTimeus" BO_ 701 100000;
+BA_ "GenMsgCycleTimeus" BO_ 809 100000;
 BA_ "GenMsgCycleTimeus" BO_ 705 100000;
 BA_ "GenMsgCycleTimeus" BO_ 800 100000;
 BA_ "GenMsgCycleTimeus" BO_ 801 100000;
@@ -1064,3 +1084,4 @@ BA_ "GenMsgCycleTimeus" BO_ 1405 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1408 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1600 100000;
 BA_ "GenMsgCycleTimeus" BO_ 1608 100000;
+BA_ "GenMsgCycleTimeus" BO_ 1 100000;

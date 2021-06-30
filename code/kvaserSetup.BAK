@@ -31,8 +31,8 @@
     </DIR>
     <DIR Name="Desktop">
       <INT Name="PixelsPerInch">96</INT>
-      <INT Name="Left">6</INT>
-      <INT Name="Top">21</INT>
+      <INT Name="Left">11</INT>
+      <INT Name="Top">22</INT>
       <INT Name="Width">663</INT>
       <INT Name="Height">101</INT>
       <INT Name="State">0</INT>
@@ -48,8 +48,8 @@
     <DIR Name="Windows">
       <DIR Name="0">
         <STR Name="Class">TCanCtrlWin</STR>
-        <INT Name="Left">6</INT>
-        <INT Name="Top">127</INT>
+        <INT Name="Left">0</INT>
+        <INT Name="Top">0</INT>
         <INT Name="Width">340</INT>
         <INT Name="Height">650</INT>
         <INT Name="State">0</INT>
@@ -94,18 +94,18 @@
           <INT Name="IdAsHex">1</INT>
           <DIR Name="Database0">
             <STR Name="Key">CAN 1</STR>
-            <STR Name="Filename">C:\Users\thoma\Documents\GitHub\IMC_2021\code\setup_can.DBC</STR>
+            <STR Name="Filename"></STR>
           </DIR>
         </DIR>
       </DIR>
       <DIR Name="2">
         <STR Name="Class">TOutputWindow</STR>
-        <INT Name="Left">676</INT>
-        <INT Name="Top">21</INT>
-        <INT Name="Width">846</INT>
-        <INT Name="Height">684</INT>
-        <INT Name="State">0</INT>
-        <INT Name="Visible">1</INT>
+        <INT Name="Left">-8</INT>
+        <INT Name="Top">-8</INT>
+        <INT Name="Width">1113</INT>
+        <INT Name="Height">662</INT>
+        <INT Name="State">2</INT>
+        <INT Name="Visible">0</INT>
         <STR Name="Caption">Output Window</STR>
         <INT Name="PixelsPerInch">96</INT>
         <INT Name="AutoScroll">1</INT>
@@ -113,8 +113,8 @@
       </DIR>
       <DIR Name="3">
         <STR Name="Class">THistoryWindow</STR>
-        <INT Name="Left">389</INT>
-        <INT Name="Top">411</INT>
+        <INT Name="Left">0</INT>
+        <INT Name="Top">0</INT>
         <INT Name="Width">453</INT>
         <INT Name="Height">275</INT>
         <INT Name="State">0</INT>
@@ -157,8 +157,8 @@
       </DIR>
       <DIR Name="7">
         <STR Name="Class">TLogFilePlayer</STR>
-        <INT Name="Left">356</INT>
-        <INT Name="Top">455</INT>
+        <INT Name="Left">0</INT>
+        <INT Name="Top">0</INT>
         <INT Name="State">0</INT>
         <INT Name="Visible">0</INT>
         <STR Name="Caption">Log File Player</STR>
@@ -166,7 +166,7 @@
         <STR Name="FileName"></STR>
         <INT Name="AutoStart">1</INT>
       </DIR>
-      <STR Name="ReverseZOrder">0,2,1</STR>
+      <STR Name="ReverseZOrder">1,0</STR>
     </DIR>
     <DIR Name="Connections">
       <STR Name="C0">0,1,0,0</STR>

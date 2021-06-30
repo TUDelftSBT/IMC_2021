@@ -1,0 +1,68 @@
+ifdef _Online_FAMOS
+Magic:1122334455,1,1
+; Executed one single time after the task is started
+OnInitAll
+	HydroMSG = CanMsg()
+	HydroMSG.ID = 20
+	HydroMSG.len = 8
+	HydroMSG.Byte0 = 0
+	HydroMSG.Byte1 = 0
+	HydroMSG.Byte2 = 0
+	HydroMSG.Byte3 = 0
+	HydroMSG.Byte4 = 0
+	HydroMSG.Byte5 = 0
+	HydroMSG.Byte6 = 0
+	HydroMSG.Byte7 = 0
+End
+
+; Executed constantly
+OnAlways
+	If Virt_Bit01_imc_BUSFX_2_133754 > 0 ;START PRIME
+		HydroMSG.Byte7 = 1
+		HydroMSG.Transmit1_S1()
+		Virt_Bit01_imc_BUSFX_2_133754 = 0
+	End
+	
+	If Virt_Bit02_imc_BUSFX_2_133754 > 0 ;STOP PRIME
+		HydroMSG.Byte7 = 0
+		HydroMSG.Transmit1_S1()
+		Virt_Bit02_imc_BUSFX_2_133754 = 0
+	End
+	
+	
+	If Virt_Bit03_imc_BUSFX_2_133754 > 0 ; OPEN VALVE
+		HydroMSG.Byte5 = 1
+		HydroMSG.Transmit1_S1()
+		Virt_Bit03_imc_BUSFX_2_133754 = 0
+	End
+	
+	If Virt_Bit04_imc_BUSFX_2_133754 > 0 ; CLOSE VALVE
+		HydroMSG.Byte5 = 0
+		HydroMSG.Transmit1_S1()
+		Virt_Bit04_imc_BUSFX_2_133754 = 0
+	End
+End
+
+; Executed one single time at the start of the trigger
+OnTriggerStart(Trigger_48_imc_BUSFX_2_133754)
+End
+
+; Constantly repeated between the trigger start and the trigger end
+OnTriggerMeasure(Trigger_48_imc_BUSFX_2_133754)
+GPS_speed = 3.6*(Sqrt(Xsense_velX^2 + Xsense_velY^2))
+BMS_Overall_NumbOfCells = BMS_Overall_NumbOfCellsLSB + BMS_Overall_NumbOfCellsMSB
+BMS_Voltage_TotalVoltage = BMS_Voltage_TotalVbyte0 + BMS_Voltage_TotalVbyte1 + BMS_Voltage_TotalVbyte2 + BMS_Voltage_TotalVbyte3
+Total_Voltage_adjusted = BMS_Voltage_TotalVoltage + pv.Shunt_Current_msg*0.0005
+FC_power = FC_State_Cstack * FC_State_Vstack
+numb_EMS_warnings = EMS_cellTemp_high+EMS_cellTemp_low+EMS_cellVoltage_high+EMS_cellVoltage_low+EMS_motorTemp_high+EMS_overcurrent+EMS_TankTemp_high+EMS_TempBattLoop_high+EMS_tempDCDCloop_high+EMS_tempMotorLoop_high+EMS_v24_tempLow+EMS_v24temp_high+EMS_v24voltage_high+EMS_v24voltage_low
+Graf_Xsens_latitude = Xsense_latitude ; added
+End
+
+; Executed one single time at the end of the trigger
+OnTriggerEnd(Trigger_48_imc_BUSFX_2_133754)
+End
+
+Properties
+YUnit( FC_power, "W" )
+YUnit( GPS_speed, "KM/H" )
+enddef (* _Online_FAMOS *)
